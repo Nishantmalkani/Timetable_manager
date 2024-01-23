@@ -2,14 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamstechnologies.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 05:54:09 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <title>Preskool - Dashboard</title>
 
 		<!-- Favicon -->
-        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}">
 
 		<!-- Fontfamily -->
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
@@ -24,10 +23,10 @@
 		<link rel="stylesheet" href="{% static 'assets/plugins/icons/flags/flags.css' %}">
 
 		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
 
 		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     </head>
     <body>
 
@@ -40,10 +39,10 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="index.html" class="logo">
-						<img src="assets/img/logo.png" alt="Logo">
+						<img src="{% static 'assets/img/logo.png' %}" alt="Logo">
 					</a>
 					<a href="index.html" class="logo logo-small">
-						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+						<img src="{% static 'assets/img/logo-small.png' %}" alt="Logo" width="30" height="30">
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -73,7 +72,7 @@
 				<ul class="nav user-menu">
 					<li  class="nav-item dropdown noti-dropdown language-drop me-2">
 						<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-							<img src="assets/img/icons/header-icon-01.svg" alt="">
+							<img src="{% static 'assets/img/icons/header-icon-01.svg' %}" alt="">
 						</a>
 						<div class="dropdown-menu ">
 							<div class="noti-content">
@@ -88,7 +87,7 @@
 					<!-- Notifications -->
 					<li class="nav-item dropdown noti-dropdown me-2">
 						<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-							<img src="assets/img/icons/header-icon-05.svg" alt="">
+							<img src="{% static 'assets/img/icons/header-icon-05.svg' %}" alt="">
 						</a>
 						<div class="dropdown-menu notifications">
 							<div class="topnav-dropdown-header">
@@ -101,7 +100,7 @@
 										<a href="#">
 											<div class="media d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="a{% static 'ssets/img/profiles/avatar-02.jpg' %}">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
@@ -114,7 +113,7 @@
 										<a href="#">
 											<div class="media d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="{% static 'assets/img/profiles/avatar-11.jpg' %}">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">International Software Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
@@ -127,7 +126,7 @@
 										<a href="#">
 											<div class="media d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="{% static 'assets/img/profiles/avatar-17.jpg' %}">
 												</span>
 												<div class="media-body flex-grow-1">
 												<p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone XR</span></p>
@@ -140,7 +139,7 @@
 										<a href="#">
 											<div class="media d-flex">
 												<span class="avatar avatar-sm flex-shrink-0">
-													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+													<img class="avatar-img rounded-circle" alt="User Image" src="{% static 'assets/img/profiles/avatar-13.jpg' %}">
 												</span>
 												<div class="media-body flex-grow-1">
 													<p class="noti-details"><span class="noti-title">Mercury Software Inc</span> added a new product <span class="noti-title">Apple MacBook Pro</span></p>
@@ -159,7 +158,7 @@
 					<!-- /Notifications -->
 					<li  class="nav-item zoom-screen me-2">
 						<a href="#" class="nav-link header-nav-list win-maximize">
-							<img src="assets/img/icons/header-icon-04.svg" alt="">
+							<img src="{% static 'assets/img/icons/header-icon-04.svg' %}" alt="">
 						</a>
 					</li>
 
@@ -167,7 +166,7 @@
 					<li class="nav-item dropdown has-arrow new-user-menus">
 						<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 							<div class="user-img">
-								<img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor">
+								<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-01.jpg' %}" width="31" alt="Ryan Taylor">
 								<div class="user-text">
 									<h6>Ryan Taylor</h6>
 									<p class="text-muted mb-0">Administrator</p>
@@ -177,7 +176,7 @@
 						<div class="dropdown-menu">
 							<div class="user-header">
 								<div class="avatar avatar-sm">
-									<img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+									<img src="{% static 'assets/img/profiles/avatar-01.jpg' %}" alt="User Image" class="avatar-img rounded-circle">
 								</div>
 								<div class="user-text">
 									<h6>Ryan Taylor</h6>
@@ -491,7 +490,7 @@
 											<h3>50055</h3>
 										</div>
 										<div class="db-icon">
-											<img  src="assets/img/icons/dash-icon-01.svg"  alt="Dashboard Icon">
+											<img  src="{% static 'assets/img/icons/dash-icon-01.svg' %}"  alt="Dashboard Icon">
 										</div>
 									</div>
 								</div>
@@ -507,7 +506,7 @@
 											<h3>50+</h3>
 										</div>
 										<div class="db-icon">
-											<img  src="assets/img/icons/dash-icon-02.svg"  alt="Dashboard Icon">
+											<img  src="{% static 'assets/img/icons/dash-icon-02.svg' %}"  alt="Dashboard Icon">
 										</div>
 									</div>
 								</div>
@@ -523,7 +522,7 @@
 											<h3>30+</h3>
 										</div>
 										<div class="db-icon">
-											<img  src="assets/img/icons/dash-icon-03.svg"  alt="Dashboard Icon">
+											<img  src="{% static 'assets/img/icons/dash-icon-03.svg' %}"  alt="Dashboard Icon">
 										</div>
 									</div>
 								</div>
@@ -539,7 +538,7 @@
 											<h3>$505</h3>
 										</div>
 										<div class="db-icon">
-											<img  src="assets/img/icons/dash-icon-04.svg"  alt="Dashboard Icon">
+											<img  src="{% static 'assets/img/icons/dash-icon-04.svg' %}"  alt="Dashboard Icon">
 										</div>
 									</div>
 								</div>
@@ -630,7 +629,7 @@
 													</td>
 													<td class="text-nowrap">
 														<a href="profile.html">
-															<img class="rounded-circle" src="assets/img/profiles/avatar-02.jpg" width="25" alt="Star Students">
+															<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-02.jpg' %}" width="25" alt="Star Students">
 															John Smith
 														</a>
 													</td>
@@ -646,7 +645,7 @@
 													</td>
 													<td class="text-nowrap">
 														<a href="profile.html">
-															<img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="25" alt="Star Students">
+															<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-01.jpg' %}" width="25" alt="Star Students">
 															Jolie Hoskins
 														</a>
 													</td>
@@ -662,7 +661,7 @@
 													</td>
 													<td class="text-nowrap">
 														<a href="profile.html">
-															<img class="rounded-circle" src="assets/img/profiles/avatar-03.jpg" width="25" alt="Star Students">
+															<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-03.jpg' %}" width="25" alt="Star Students">
 															Pennington Joy
 														</a>
 													</td>
@@ -678,7 +677,7 @@
 													</td>
 													<td class="text-nowrap">
 														<a href="profile.html">
-															<img class="rounded-circle" src="assets/img/profiles/avatar-04.jpg" width="25" alt="Star Students">
+															<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-04.jpg' %}" width="25" alt="Star Students">
 															Millie Marsden
 														</a>
 													</td>
@@ -694,7 +693,7 @@
 													</td>
 													<td class="text-nowrap">
 														<a href="profile.html">
-															<img class="rounded-circle" src="assets/img/profiles/avatar-05.jpg" width="25" alt="Star Students">
+															<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-05.jpg' %}" width="25" alt="Star Students">
 															John Smith
 														</a>
 													</td>
@@ -725,7 +724,7 @@
 									<div class="activity-groups">
 										<div class="activity-awards">
 											<div class="award-boxs">
-												<img  src="assets/img/icons/award-icon-01.svg"  alt="Award">
+												<img  src="{% static 'assets/img/icons/award-icon-01.svg' %}"  alt="Award">
 											</div>
 											<div class="award-list-outs">
 												<h4>1st place in "Chess”</h4>
@@ -737,7 +736,7 @@
 										</div>
 										<div class="activity-awards">
 											<div class="award-boxs">
-												<img  src="assets/img/icons/award-icon-02.svg"  alt="Award">
+												<img  src="{% static 'assets/img/icons/award-icon-02.svg' %}"  alt="Award">
 											</div>
 											<div class="award-list-outs">
 												<h4>Participated in "Carrom"</h4>
@@ -749,7 +748,7 @@
 										</div>
 										<div class="activity-awards">
 											<div class="award-boxs">
-												<img  src="assets/img/icons/award-icon-03.svg"  alt="Award">
+												<img  src="{% static 'assets/img/icons/award-icon-03.svg' %}"  alt="Award">
 											</div>
 											<div class="award-list-outs">
 												<h4>Internation conference in "St.John School"</h4>
@@ -761,7 +760,7 @@
 										</div>
 										<div class="activity-awards mb-0">
 											<div class="award-boxs">
-												<img  src="assets/img/icons/award-icon-04.svg"  alt="Award">
+												<img  src="{% static 'assets/img/icons/award-icon-04.svg' %}"  alt="Award">
 											</div>
 											<div class="award-list-outs">
 												<h4>Won 1st place in "Chess"</h4>
@@ -787,7 +786,7 @@
 									<h6>50,095</h6>
 								</div>
 								<div class="social-boxs">
-									<img  src="assets/img/icons/social-icon-01.svg"  alt="Social Icon">
+									<img  src="{% static 'assets/img/icons/social-icon-01.svg' %}"  alt="Social Icon">
 								</div>
 							</div>
 						</div>
@@ -798,7 +797,7 @@
 									<h6>48,596</h6>
 								</div>
 								<div class="social-boxs">
-									<img  src="assets/img/icons/social-icon-02.svg"  alt="Social Icon">
+									<img  src="{% static 'assets/img/icons/social-icon-02.svg' %}"  alt="Social Icon">
 								</div>
 							</div>
 						</div>
@@ -810,7 +809,7 @@
 									<h6>52,085</h6>
 								</div>
 								<div class="social-boxs">
-									<img  src="assets/img/icons/social-icon-03.svg"  alt="Social Icon">
+									<img  src="{% static 'assets/img/icons/social-icon-03.svg' %}"  alt="Social Icon">
 								</div>
 							</div>
 						</div>
@@ -822,7 +821,7 @@
 									<h6>69,050</h6>
 								</div>
 								<div class="social-boxs">
-									<img  src="assets/img/icons/social-icon-04.svg"  alt="Social Icon">
+									<img  src="{% static 'assets/img/icons/social-icon-04.svg' %}"  alt="Social Icon">
 								</div>
 							</div>
 						</div>
@@ -845,25 +844,23 @@
 		<!-- /Main Wrapper -->
 
 		<!-- jQuery -->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
 
 		<!-- Bootstrap Core JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
 
 		<!-- Feather Icon JS -->
-		<script src="assets/js/feather.min.js"></script>
+		<script src="{% static 'assets/js/feather.min.js' %}"></script>
 
 		<!-- Slimscroll JS -->
-		<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="{% static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
 
 		<!-- Chart JS -->
-		<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-		<script src="assets/plugins/apexchart/chart-data.js"></script>
+		<script src="{% static 'assets/plugins/apexchart/apexcharts.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/apexchart/chart-data.js' %}"></script>
 
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
 
     </body>
 
-<!-- Mirrored from preschool.dreamstechnologies.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 05:54:43 GMT -->
-</html>

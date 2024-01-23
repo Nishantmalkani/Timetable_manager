@@ -18,6 +18,16 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
+    <option name="templateFileTypes">
+      <list>
+        <option value="HTML" />
+        <option value="JavaScript" />
+        <option value="SQL" />
+        <option value="XHTML" />
+        <option value="XML" />
+        <option value="YAML" />
+      </list>
+    </option>
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
