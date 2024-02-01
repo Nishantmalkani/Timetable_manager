@@ -16,11 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app1 import views
+from app1 import views
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("index/", views.demo1),
+    path("add-department/", views.adddepartment),
+    path("add-subject/", views.addsubject),
+    path("add-teacher/", views.addteacher),
+    path("department/", views.department),
+    path("edit-department/", views.editdepartment),
+    path("edit-teacher/", views.editteacher),
+    path("subject/", views.subject),
 ]
 
 
