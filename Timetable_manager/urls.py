@@ -29,6 +29,8 @@ urlpatterns = [
     path("edit-department/", views.editdepartment),
     path("edit-teacher/", views.editteacher),
     path("subject/", views.subject),
+    path("teacher-details/", views.teacherdetails),
+    path("teacher/", views.teacher),
 ]
 
 

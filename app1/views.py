@@ -23,3 +23,9 @@ def editteacher(request):
 
 def subject(request):
     return render(request, 'subject.html')
+
+def teacherdetails(request):
+    return render(request, 'teacher-details.html')
+
+def teacher(request):
+    return render(request, 'teacher.html')
