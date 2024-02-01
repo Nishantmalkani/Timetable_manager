@@ -29,3 +29,6 @@ def teacherdetails(request):
 
 def teacher(request):
     return render(request, 'teacher.html')
+
+def timetable(request):
+    return render(request, 'timetable.html')

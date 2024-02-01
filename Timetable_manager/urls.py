@@ -31,6 +31,7 @@ urlpatterns = [
     path("subject/", views.subject),
     path("teacher-details/", views.teacherdetails),
     path("teacher/", views.teacher),
+    path("timetable/", views.timetable),
 ]
 
 
