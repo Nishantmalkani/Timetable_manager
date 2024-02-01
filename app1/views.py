@@ -22,13 +22,13 @@ def editteacher(request):
     return render(request, 'edit-teacher.html')
 
 def subject(request):
-    return render(request, 'subject.html')
+    return render(request, 'subjects.html')
 
 def teacherdetails(request):
-    return render(request, 'teacher-details.html')
+    return render(request, 'teachers-details.html')
 
 def teacher(request):
-    return render(request, 'teacher.html')
+    return render(request, 'teachers.html')
 
 def timetable(request):
-    return render(request, 'timetable.html')
+    return render(request, 'time-table.html')
