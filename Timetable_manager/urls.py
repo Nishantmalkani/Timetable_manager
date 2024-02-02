@@ -21,17 +21,19 @@ from app1 import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("index/", views.demo1),
-    path("add-department/", views.adddepartment),
-    path("add-subject/", views.addsubject),
+    path("", views.demo1,name='index'),
+    path("add-department/", views.adddepartment,name='add-department'),
+    path("add-subject/", views.addsubject,name='add-subject'),
     path("add-teacher/", views.addteacher),
-    path("department/", views.department),
-    path("edit-department/", views.editdepartment),
+    path("editsubject/", views.editsubject,name='editsubject'),
+    path("department/", views.department,name='department'),
+    path("edit-department/", views.editdepartment,name='edit-department'),
     path("edit-teacher/", views.editteacher),
-    path("subject/", views.subject),
+    path("subject/", views.subject,name='subject'),
     path("teacher-details/", views.teacherdetails),
     path("teacher/", views.teacher),
-    path("timetable/", views.timetable),
+    path("timetable/", views.timetable,name='timetable'),
+    path("login/", views.login),
 ]
 
 

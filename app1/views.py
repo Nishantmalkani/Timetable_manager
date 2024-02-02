@@ -18,6 +18,9 @@ def department(request):
 def editdepartment(request):
     return render(request, 'edit-department.html')
 
+def editsubject(request):
+    return render(request,'edit-subject.html')
+
 def editteacher(request):
     return render(request, 'edit-teacher.html')
 
@@ -32,3 +35,7 @@ def teacher(request):
 
 def timetable(request):
     return render(request, 'time-table.html')
+
+def login(request):
+    return render(request, 'login.html')
+
