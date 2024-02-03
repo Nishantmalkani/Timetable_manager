@@ -28,7 +28,7 @@ def subject(request):
     return render(request, 'subjects.html')
 
 def teacherdetails(request):
-    return render(request, 'teachers-details.html')
+    return render(request, 'teacher-details.html')
 
 def teacher(request):
     return render(request, 'teachers.html')
