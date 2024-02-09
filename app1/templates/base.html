@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamstechnologies.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 05:54:09 GMT -->
+
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -41,10 +41,10 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="{% url 'index' %}" class="logo">
-						<img src="{% static 'assets/img/logo.jpg' %}" alt="Logo">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
 					</a>
-					<a href="index.html" class="logo logo-small">
-						<img src="{% static 'assets/img/logo-small.png' %}" alt="Logo" width="30" height="30">
+                    <a href="{% url 'index' %}" class="logo logo-small">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="Logo" width="30" height="30">
 					</a>
                 </div>
 				<!-- /Logo -->
@@ -72,21 +72,8 @@
 
 				<!-- Header Right Menu -->
 				<ul class="nav user-menu">
-					<li  class="nav-item dropdown noti-dropdown language-drop me-2">
-						<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-							<img src="{% static 'assets/img/icons/header-icon-01.svg' %}" alt="">
-						</a>
-						<div class="dropdown-menu ">
-							<div class="noti-content">
-								<div >
-									<a class="dropdown-item" href="javascript:;"><i class="flag flag-lr me-2"></i>English</a>
-									<a class="dropdown-item" href="javascript:;"><i class="flag flag-bl me-2"></i>Francais</a>
-									<a class="dropdown-item" href="javascript:;"><i class="flag flag-cn me-2"></i>Turkce</a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<!-- Notifications -->
+
+                <!-- Notifications -->
 					<li class="nav-item dropdown noti-dropdown me-2">
 						<a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
 							<img src="{% static 'assets/img/icons/header-icon-05.svg' %}" alt="">
@@ -283,7 +270,17 @@
 		<!-- Custom JS -->
 		<script src="{% static 'assets/js/script.js' %}"></script>
 
+            <!-- Calendar Js -->
+            <script src="{% static 'assets/plugins/simple-calendar/jquery.simple-calendar.js' %}"></script>
+            <script src="{% static 'assets/plugins/simple-calendar/simple-calendar.css' %}"></script>
+            <script src="{% static 'assets/js/calander.js' %}"></script>
+
+
+            <!-- Circle Progress JS -->
+            <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>
+
+
     </body>
 
-<!-- Mirrored from preschool.dreamstechnologies.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jan 2024 05:54:43 GMT -->
+
 </html>    
