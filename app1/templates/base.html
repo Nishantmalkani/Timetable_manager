@@ -11,8 +11,6 @@
 		<!-- Favicon -->
         <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}">
 
-		<!-- Fontfamily -->
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -172,9 +170,9 @@
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="inbox.html">Inbox</a>
-							<a class="dropdown-item" href="login.html">Logout</a>
+                            <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+
+                            <a class="dropdown-item" href="{% url 'login' %}">Logout</a>
 						</div>
 					</li>
 					<!-- /User Menu -->
@@ -231,7 +229,7 @@
 							<li class="submenu">
 								<a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="login.html">Login</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
 									<li><a href="register.html">Register</a></li>
 									<li><a href="forgot-password.html">Forgot Password</a></li>
 									<li><a href="error-404.html">Error Page</a></li>
@@ -240,9 +238,8 @@
 
 
 											</ul>
-							</li>
-						</ul>
-					</div>
+
+                    </div>
                 </div>
             </div>
 			<!-- /Sidebar -->
@@ -272,7 +269,7 @@
 
             <!-- Calendar Js -->
             <script src="{% static 'assets/plugins/simple-calendar/jquery.simple-calendar.js' %}"></script>
-            <script src="{% static 'assets/plugins/simple-calendar/simple-calendar.css' %}"></script>
+
             <script src="{% static 'assets/js/calander.js' %}"></script>
 
 
