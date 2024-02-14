@@ -14,9 +14,21 @@ def addsubject(request):
 
 def addteacher(request):
     if request.method == 'POST':
-        name = request.POST['name']
         faculty_id = request.POST['faculty_id']
-        faculty(name=name, faculty_id=faculty_id).save()
+        name = request.POST['name']
+        date_of_birth = request.POST['date_of_birth']
+        department = request.POST['department']
+        designation = request.POST['designation']
+        expertise = request.POST['expertise']
+        qualification = request.POST['qualification']
+        join_date = request.POST['join_date']
+        address = request.POST['address']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        password = request.POST['password']
+        faculty(faculty_id=faculty_id, name=name, date_of_birth=date_of_birth, department=department,
+                designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
+                phone=phone, address=address, email=email, password=password).save()
     return render(request, 'add-teacher.html')
 
 def department(request):
