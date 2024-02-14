@@ -29,21 +29,24 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form>
+                                    <form method="POST">
+                                        {% csrf_token %}
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Basic Details</span></h5>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
-													<label>Teacher ID <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Teacher ID">
+                                                    <label>Faculty ID <span class="login-danger">*</span></label>
+                                                    <input name="name" type="text" class="form-control"
+                                                           placeholder="Teacher ID">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Name <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter Name">
+                                                    <input name="faculty_id" type="text" class="form-control"
+                                                           placeholder="Enter Name">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">

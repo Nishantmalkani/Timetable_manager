@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from .models import *
+
+
 def demo1(request):
     return render(request,'index.html')
 
@@ -10,6 +13,10 @@ def addsubject(request):
     return render(request, 'add-subject.html')
 
 def addteacher(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        faculty_id = request.POST['faculty_id']
+        faculty(name=name, faculty_id=faculty_id).save()
     return render(request, 'add-teacher.html')
 
 def department(request):
