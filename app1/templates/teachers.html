@@ -58,10 +58,12 @@
 												<h3 class="page-title">Teachers</h3>
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
-												<a href="teachers.html" class="btn btn-outline-gray me-2 active"><i class="feather-list"></i></a>
-												<a href="teachers-grid.html" class="btn btn-outline-gray me-2"><i class="feather-grid"></i></a>
-												<a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
-												<a href="add-teacher.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                                                <a href="{% url 'teacher' %}"
+                                                   class="btn btn-outline-gray me-2 active"><i class="feather-list"></i></a>
+
+                                                <a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
+                                                <a href="{% url 'add-teacher' %}" class="btn btn-primary"><i
+                                                        class="fas fa-plus"></i></a>
 											</div>
 										</div>
 									</div>
@@ -97,8 +99,12 @@
 													<td>PRE2209</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-02.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Aaliyah</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-02.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Aaliyah</a>
 														</h2>
 													</td>
 													<td>10</td>
@@ -112,7 +118,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -127,8 +134,12 @@
 													<td>PRE2213</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-03.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Malynne</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-03.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Malynne</a>
 														</h2>
 													</td>
 													<td>8</td>
@@ -142,7 +153,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -157,8 +169,12 @@
 													<td>PRE2143</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-04.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Levell Scott</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-04.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Levell Scott</a>
 														</h2>
 													</td>
 													<td>10</td>
@@ -172,7 +188,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -187,8 +204,12 @@
 													<td>PRE2431</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-05.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Minnie</a>
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-05.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'edit-teacher' %}">Minnie</a>
 														</h2>
 													</td>
 													<td>11</td>
@@ -202,7 +223,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -217,8 +239,12 @@
 													<td>PRE1534</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-06.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Lois A</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-06.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Lois A</a>
 														</h2>
 													</td>
 													<td>10</td>
@@ -232,7 +258,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -247,8 +274,12 @@
 													<td>PRE2153</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-07.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Calvin</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-07.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Calvin</a>
 														</h2>
 													</td>
 													<td>9</td>
@@ -262,7 +293,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -277,8 +309,12 @@
 													<td>PRE1434</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-08.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Vincent</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-08.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Vincent</a>
 														</h2>
 													</td>
 													<td>10</td>
@@ -292,7 +328,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -307,13 +344,17 @@
 													<td>PRE2345</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-09.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Kozma  Tatari</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-09.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Kozma  Tatari</a>
 														</h2>
 													</td>
 													<td>9</td>
 													<td>Female</td>
-													<td>Science</td>
+                                                    <td>Database Management</td>
 													<td>A</td>
 													<td>04 2239 968</td>
 													<td>Rruga E Kavajes, Condor Center, Tirana</td>
@@ -322,7 +363,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -337,13 +379,17 @@
 													<td>PRE2365</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-10.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">John Chambers</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-10.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">John Chambers</a>
 														</h2>
 													</td>
 													<td>11</td>
 													<td>Male</td>
-													<td>Botony</td>
+                                                    <td>Operating System</td>
 													<td>B</td>
 													<td>870 663 2334</td>
 													<td>4667 Sunset Drive, Pine Bluff</td>
@@ -352,7 +398,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -367,13 +414,17 @@
 													<td>PRE1234</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="teacher-details.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="{% static 'assets/img/profiles/avatar-11.jpg' %}" alt="User Image"></a>
-															<a href="teacher-details.html">Nathan Humphries</a>
+                                                            <a href="{% url 'teacher-details' %}"
+                                                               class="avatar avatar-sm me-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="{% static 'assets/img/profiles/avatar-11.jpg' %}"
+                                                                    alt="User Image"></a>
+                                                            <a href="{% url 'teacher-details' %}">Nathan Humphries</a>
 														</h2>
 													</td>
 													<td>10</td>
 													<td>Male</td>
-													<td>Biology</td>
+                                                    <td>Computer Architecture</td>
 													<td>A</td>
 													<td>077 3499 9959</td>
 													<td>86 Lamphey Road, Thelnetham</td>
@@ -382,7 +433,8 @@
 															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
 																<i class="feather-eye"></i>
 															</a>
-															<a href="edit-teacher.html" class="btn btn-sm bg-danger-light">
+                                                            <a href="{% url 'edit-teacher' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>

@@ -2,7 +2,9 @@ from django.db import models
 
 
 class department(models.Model):
+    dept_id = models.CharField(max_length=500)
     dept_name = models.CharField(max_length=500)
+    hod = models.CharField(max_length=500)
 
 
 class faculty(models.Model):
@@ -18,6 +20,7 @@ class faculty(models.Model):
     phone = models.CharField(max_length=500)
     email = models.EmailField()
     password = models.CharField(max_length=500)
+
 
 class subject(models.Model):
     subject_name = models.CharField(max_length=500)

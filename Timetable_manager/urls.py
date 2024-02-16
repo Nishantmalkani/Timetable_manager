@@ -20,20 +20,21 @@ from app1 import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.demo1,name='index'),
-    path("add-department/", views.adddepartment,name='add-department'),
-    path("add-subject/", views.addsubject,name='add-subject'),
-    path("add-teacher/", views.addteacher,name='add-teacher'),
-    path("editsubject/", views.editsubject,name='editsubject'),
-    path("department/", views.department,name='department'),
-    path("edit-department/", views.editdepartment,name='edit-department'),
-    path("edit-teacher/", views.editteacher,name='edit-teacher'),
-    path("subject/", views.subject,name='subject'),
-    path("teacher-details/", views.teacherdetails,name='teacher-details'),
-    path("teacher/", views.teacher,name='teacher'),
+    path("", views.demo1, name='index'),
+    path("add-department/", views.adddepartment, name='add-department'),
+    path("add-subject/", views.addsubject, name='add-subject'),
+    path("add-teacher/", views.addteacher, name='add-teacher'),
+    path("editsubject/", views.editsubject, name='editsubject'),
+    path("department/", views.department, name='department'),
+    path("edit-department/", views.editdepartment, name='edit-department'),
+    path("edit-teacher/", views.editteacher, name='edit-teacher'),
+    path("subject/", views.subject, name='subject'),
+    path("teacher-details/", views.teacherdetails, name='teacher-details'),
+    path("teacher/", views.teacher, name='teacher'),
     path("timetable/", views.timetable,name='timetable'),
-    path("login/", views.login,name='login'),
+    path("login/", views.login, name='login'),
     path("profile/", views.profile, name='profile'),
+    path("edit-time-tabel/", views.edit_timetable, name="edit-time-tabel"),
 ]
 
 

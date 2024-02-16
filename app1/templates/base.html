@@ -25,13 +25,18 @@
 		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
 
-		<!-- Main CSS -->
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/datatables/datatables.min.css' %}">
+
+    <!-- Main CSS -->
         <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    </head>
+
+
+</head>
     <body>
 
 		<!-- Main Wrapper -->
-        <div class="main-wrapper">
+        <div class="main-wrapper slide-nav">
 
 			<!-- Header -->
             <div class="header">
@@ -191,9 +196,8 @@
 							<li class="menu-title">
 								<span>Main Menu</span>
 							</li>
-							<li class="submenu active">
+                            <li>
 								<a href="{% url 'index' %}"><i class="feather-grid"></i> <span> Dashboard</span> </a>
-								
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span class="menu-arrow"></span></a>
@@ -268,11 +272,13 @@
 		<!-- Custom JS -->
 		<script src="{% static 'assets/js/script.js' %}"></script>
 
+            <!-- Datatables JS -->
+            <script src="{% static 'assets/plugins/datatables/datatables.min.js' %}"></script>
+
             <!-- Calendar Js -->
             <script src="{% static 'assets/plugins/simple-calendar/jquery.simple-calendar.js' %}"></script>
 
             <script src="{% static 'assets/js/calander.js' %}"></script>
-
 
             <!-- Circle Progress JS -->
             <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>

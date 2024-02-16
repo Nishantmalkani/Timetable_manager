@@ -57,7 +57,8 @@
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
 												<a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
-												<a href="add-subject.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                                                <a href="{% url 'add-subject' %}" class="btn btn-primary"><i
+                                                        class="fas fa-plus"></i></a>
 											</div>
 										</div>
 									</div>
@@ -88,16 +89,15 @@
 													<td>PRE2209</td>
 													<td>
 														<h2>
-															<a>Mathematics</a>
+                                                            <a>Web Technology</a>
 														</h2>
 													</td>
 													<td>5</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -112,16 +112,15 @@
 													<td>PRE2213</td>
 													<td>
 														<h2>
-															<a>History</a>
+                                                            <a>Computer Networking</a>
 														</h2>
 													</td>
 													<td>6</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -136,16 +135,15 @@
 													<td>PRE2143</td>
 													<td>
 														<h2>
-															<a>Science</a>
+                                                            <a>Computer Architecture</a>
 														</h2>
 													</td>
 													<td>3</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -160,16 +158,15 @@
 													<td>PRE2431</td>
 													<td>
 														<h2>
-															<a>Geography</a>
+                                                            <a>Database Management</a>
 														</h2>
 													</td>
 													<td>8</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -184,16 +181,15 @@
 													<td>PRE1534</td>
 													<td>
 														<h2>
-															<a>Botony</a>
+                                                            <a>Operating System</a>
 														</h2>
 													</td>
-													<td>9</td>
+                                                    <td>6</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -208,16 +204,15 @@
 													<td>PRE2153</td>
 													<td>
 														<h2>
-															<a>English</a>
+                                                            <a>Java Programming</a>
 														</h2>
 													</td>
 													<td>4</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="edit-subject.html" class="btn btn-sm bg-danger-light">
+
+                                                            <a href="{% url 'editsubject' %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -236,9 +231,8 @@
             </div>
 			<!-- /Page Wrapper -->
 
-        </div>
-		<!-- /Main Wrapper -->
 
-		
+
+
 {% endblock body %}
 	
