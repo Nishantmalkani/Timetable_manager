@@ -13,7 +13,7 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Teachers</h3>
+                                <h3 class="page-title">Faculty</h3>
 
                             </div>
 						</div>
@@ -32,12 +32,8 @@
 									<input type="text" class="form-control" placeholder="Search by Name ...">
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by Phone ...">
-								</div>
-							</div>
-							<div class="col-lg-2">
+
+                            <div class="col-lg-2">
 								<div class="search-student-btn">
 									<button type="btn" class="btn btn-primary">Search</button>
 								</div>
@@ -55,7 +51,7 @@
 									<div class="page-header">
 										<div class="row align-items-center">
 											<div class="col">
-												<h3 class="page-title">Teachers</h3>
+                                                <h3 class="page-title">Faculty</h3>
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
                                                 <a href="{% url 'teacher' %}"
@@ -71,6 +67,14 @@
 
 									<div class="table-responsive">
 										<table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
+                                            <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
+                                                <select name="DataTables_Table_0_length"
+                                                        aria-controls="DataTables_Table_0" class="">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select> entries</label></div>
 											<thead class="student-thread">
 												<tr>
 													<th>
@@ -83,7 +87,7 @@
 													<th>Class</th>
 													<th>Gender</th>
 													<th>Subject</th>
-													<th>Section</th>
+                                                    <th>Semester</th>
 													<th>Mobile Number</th>
 													<th>Address</th>
 													<th class="text-end">Action</th>
@@ -107,10 +111,10 @@
                                                             <a href="{% url 'teacher-details' %}">Aaliyah</a>
 														</h2>
 													</td>
-													<td>10</td>
+                                                    <td>DA</td>
 													<td>Female</td>
-													<td>Mathematics</td>
-													<td>A</td>
+                                                    <td>Java programming</td>
+                                                    <td>4</td>
 													<td>097 3584 5870</td>
 													<td>911 Deer Ridge Drive,USA</td>
 													<td class="text-end">
@@ -142,10 +146,10 @@
                                                             <a href="{% url 'teacher-details' %}">Malynne</a>
 														</h2>
 													</td>
-													<td>8</td>
+                                                    <td>DA</td>
 													<td>Female</td>
-													<td>Physics</td>
-													<td>A</td>
+                                                    <td>Java Programming</td>
+                                                    <td>4</td>
 													<td>242 362 3100</td>
 													<td>Bacardi Rd P.O. Box N-4880, New Providence</td>
 													<td class="text-end">
@@ -177,10 +181,10 @@
                                                             <a href="{% url 'teacher-details' %}">Levell Scott</a>
 														</h2>
 													</td>
-													<td>10</td>
+                                                    <td>DC</td>
 													<td>Male</td>
-													<td>Science</td>
-													<td>B</td>
+                                                    <td>Python Programming</td>
+                                                    <td>5</td>
 													<td>026 7318 4366</td>
 													<td>P.O. Box: 41, Gaborone</td>
 													<td class="text-end">
@@ -212,10 +216,10 @@
                                                             <a href="{% url 'edit-teacher' %}">Minnie</a>
 														</h2>
 													</td>
-													<td>11</td>
+                                                    <td>DD</td>
 													<td>Male</td>
-													<td>History</td>
-													<td>C</td>
+                                                    <td>Web Technology</td>
+                                                    <td>5</td>
 													<td>952 512 4909</td>
 													<td>4771  Oral Lake Road, Golden Valley</td>
 													<td class="text-end">
@@ -247,10 +251,10 @@
                                                             <a href="{% url 'teacher-details' %}">Lois A</a>
 														</h2>
 													</td>
-													<td>10</td>
+                                                    <td>DA</td>
 													<td>Female</td>
-													<td>English</td>
-													<td>B</td>
+                                                    <td>Computer Architecture</td>
+                                                    <td>3</td>
 													<td>413 289 1314</td>
 													<td>2844 Leverton Cove Road, Palmer</td>
 													<td class="text-end">
@@ -282,10 +286,10 @@
                                                             <a href="{% url 'teacher-details' %}">Calvin</a>
 														</h2>
 													</td>
-													<td>9</td>
+                                                    <td>DB</td>
 													<td>Male</td>
-													<td>Mathematics</td>
-													<td>C</td>
+                                                    <td>Computer Network</td>
+                                                    <td>4</td>
 													<td>701 753 3810</td>
 													<td>1900  Hidden Meadow Drive, Crete</td>
 													<td class="text-end">
@@ -317,10 +321,10 @@
                                                             <a href="{% url 'teacher-details' %}">Vincent</a>
 														</h2>
 													</td>
-													<td>10</td>
+                                                    <td>DC</td>
 													<td>Male</td>
-													<td>Mathematics</td>
-													<td>C</td>
+                                                    <td>Wireless Communication</td>
+                                                    <td>4</td>
 													<td>402 221 7523</td>
 													<td>3979  Ashwood Drive, Omaha</td>
 													<td class="text-end">
@@ -352,10 +356,10 @@
                                                             <a href="{% url 'teacher-details' %}">Kozma  Tatari</a>
 														</h2>
 													</td>
-													<td>9</td>
+                                                    <td>DD</td>
 													<td>Female</td>
                                                     <td>Database Management</td>
-													<td>A</td>
+                                                    <td>3</td>
 													<td>04 2239 968</td>
 													<td>Rruga E Kavajes, Condor Center, Tirana</td>
 													<td class="text-end">
@@ -387,10 +391,10 @@
                                                             <a href="{% url 'teacher-details' %}">John Chambers</a>
 														</h2>
 													</td>
-													<td>11</td>
+                                                    <td>DB</td>
 													<td>Male</td>
                                                     <td>Operating System</td>
-													<td>B</td>
+                                                    <td>3</td>
 													<td>870 663 2334</td>
 													<td>4667 Sunset Drive, Pine Bluff</td>
 													<td class="text-end">
@@ -422,10 +426,10 @@
                                                             <a href="{% url 'teacher-details' %}">Nathan Humphries</a>
 														</h2>
 													</td>
-													<td>10</td>
+                                                    <td>DA</td>
 													<td>Male</td>
                                                     <td>Computer Architecture</td>
-													<td>A</td>
+                                                    <td>3</td>
 													<td>077 3499 9959</td>
 													<td>86 Lamphey Road, Thelnetham</td>
 													<td class="text-end">
@@ -442,7 +446,22 @@
 												</tr>
 											</tbody>
 										</table>
-									</div>
+                                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                             aria-live="polite">Showing 1 to 10 of 10 entries
+                                        </div>
+                                        <div class="dataTables_paginate paging_simple_numbers"
+                                             id="DataTables_Table_0_paginate"><a
+                                                class="paginate_button previous disabled"
+                                                aria-controls="DataTables_Table_0" aria-disabled="true" role="link"
+                                                data-dt-idx="previous" tabindex="-1" id="DataTables_Table_0_previous">Previous</a><span><a
+                                                class="paginate_button current" aria-controls="DataTables_Table_0"
+                                                role="link" aria-current="page" data-dt-idx="0"
+                                                tabindex="0">1</a></span><a class="paginate_button next disabled"
+                                                                            aria-controls="DataTables_Table_0"
+                                                                            aria-disabled="true" role="link"
+                                                                            data-dt-idx="next" tabindex="-1"
+                                                                            id="DataTables_Table_0_next">Next</a></div>
+                                    </div>
 								</div>
 							</div>
 						</div>
