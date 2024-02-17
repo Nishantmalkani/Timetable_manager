@@ -77,3 +77,11 @@ def profile(request):
 
 def edit_timetable(request):
     return render(request, 'edit-time-table.html')
+
+
+def forget_password(request):
+    return render(request, 'forgot-password.html')
+
+
+def register(request):
+    return render(request, 'register.html')
