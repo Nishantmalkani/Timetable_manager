@@ -2,7 +2,36 @@
 {% load static %}
 
 {% block body %}
-	
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+        }
+
+        a:hover {
+            background-color: #ddd;
+            color: blue;
+        }
+
+        .previous {
+            background-color: ;
+            color: black;
+        }
+
+        .next {
+            background-color: ;
+            color: black;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+    </style>
+
 
 	
 			<!-- Page Wrapper -->
@@ -103,11 +132,7 @@
 													<td>PRE2209</td>
 													<td>
 														<h2 class="table-avatar">
-                                                            <a href="{% url 'teacher-details' %}"
-                                                               class="avatar avatar-sm me-2"><img
-                                                                    class="avatar-img rounded-circle"
-                                                                    src="{% static 'assets/img/profiles/avatar-02.jpg' %}"
-                                                                    alt="User Image"></a>
+
                                                             <a href="{% url 'teacher-details' %}">Aaliyah</a>
 														</h2>
 													</td>
@@ -449,19 +474,11 @@
                                         <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
                                              aria-live="polite">Showing 1 to 10 of 10 entries
                                         </div>
-                                        <div class="dataTables_paginate paging_simple_numbers"
-                                             id="DataTables_Table_0_paginate"><a
-                                                class="paginate_button previous disabled"
-                                                aria-controls="DataTables_Table_0" aria-disabled="true" role="link"
-                                                data-dt-idx="previous" tabindex="-1" id="DataTables_Table_0_previous">Previous</a><span><a
-                                                class="paginate_button current" aria-controls="DataTables_Table_0"
-                                                role="link" aria-current="page" data-dt-idx="0"
-                                                tabindex="0">1</a></span><a class="paginate_button next disabled"
-                                                                            aria-controls="DataTables_Table_0"
-                                                                            aria-disabled="true" role="link"
-                                                                            data-dt-idx="next" tabindex="-1"
-                                                                            id="DataTables_Table_0_next">Next</a></div>
-                                    </div>
+                                        <a href="#" class="previous">&laquo; Previous</a>
+                                        <a href="#" class="next">Next &raquo;</a>
+
+                                        <a href="#" class="previous round">&#8249;</a>
+                                        <a href="#" class="next round">&#8250;</a>
 								</div>
 							</div>
 						</div>
