@@ -37,6 +37,7 @@ urlpatterns = [
     path("edit-time-tabel/", views.edit_timetable, name="edit-time-tabel"),
     path("forget-password/", views.forget_password, name="forget-password"),
     path("register/", views.register, name="register"),
+    path("add-time-table/", views.add_timetable, name="add-time-table"),
     
 ]
 

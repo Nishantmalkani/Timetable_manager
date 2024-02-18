@@ -85,3 +85,7 @@ def forget_password(request):
 
 def register(request):
     return render(request, 'register.html')
+
+
+def add_timetable(request):
+    return render(request, 'add-time-table.html')
