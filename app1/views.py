@@ -60,7 +60,8 @@ def teacherdetails(request):
 
 
 def teacher(request):
-    return render(request, 'teachers.html')
+        fac = faculty.objects.all()
+    return render(request, 'teachers.html', {'fac': fac})
 
 
 def timetable(request):
