@@ -8,6 +8,11 @@ def demo1(request):
 
 
 def adddepartment(request):
+    if request.method == 'POST':
+        dept_id = request.POST['dept_id']
+        dept_name = request.POST['dept_name']
+        hod = request.POST['hod']
+        department(dept_id=dept_id, dept_name=dept_name, hod=hod).save()
     return render(request, 'add-department.html')
 
 
@@ -20,6 +25,7 @@ def addteacher(request):
         faculty_id = request.POST['faculty_id']
         name = request.POST['name']
         date_of_birth = request.POST['date_of_birth']
+        # gender = request.POST['gender']
         departments = request.POST['department']
         designation = request.POST['designation']
         expertise = request.POST['expertise']
@@ -29,14 +35,15 @@ def addteacher(request):
         phone = request.POST['phone']
         email = request.POST['email']
         password = request.POST['password']
-        faculty(faculty_id=faculty_id, name=name, date_of_birth=date_of_birth, department=departments,
+        faculty(faculty_id=faculty_id, name=name, date_of_birth=date_of_birth, gender=gender, department=departments,
                 designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
                 phone=phone, address=address, email=email, password=password).save()
     return render(request, 'add-teacher.html')
 
 
 def department(request):
-    return render(request, 'department.html')
+    dep = department.objects.all()
+    return render(request, 'department.html', {'dep': dep})
 
 
 def editdepartment(request):
@@ -60,7 +67,7 @@ def teacherdetails(request):
 
 
 def teacher(request):
-        fac = faculty.objects.all()
+    fac = faculty.objects.all()
     return render(request, 'teachers.html', {'fac': fac})
 
 

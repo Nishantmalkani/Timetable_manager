@@ -28,7 +28,8 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form>
+                                    <form method="Post">
+                                        {% csrf_token %}
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Department Details</span></h5>
@@ -36,19 +37,19 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Department ID <span class="login-danger">*</span></label>
-													<input type="text" class="form-control">
+                                                    <input type="text" class="form-control" name="dept_name">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Department Name <span class="login-danger">*</span></label>
-													<input type="text" class="form-control">
+                                                    <input type="text" class="form-control" name="dept_name">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Head of Department <span class="login-danger">*</span></label>
-													<input type="text" class="form-control">
+                                                    <input type="text" class="form-control" name="hod">
 												</div>
 											</div>
                                             <div class="col-12 col-sm-4">

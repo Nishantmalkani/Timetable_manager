@@ -11,6 +11,7 @@ class faculty(models.Model):
     faculty_id = models.CharField(max_length=500)
     name = models.CharField(max_length=500)
     date_of_birth = models.DateField()
+    # gender = models.CharField(max_length=500)
     department = models.ForeignKey(department, on_delete=models.CASCADE)
     designation = models.CharField(max_length=500)
     expertise = models.CharField(max_length=500)
