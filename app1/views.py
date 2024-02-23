@@ -12,11 +12,16 @@ def adddepartment(request):
         dept_id = request.POST['dept_id']
         dept_name = request.POST['dept_name']
         hod = request.POST['hod']
-        department(dept_id=dept_id, dept_name=dept_name, hod=hod).save()
+        departments(dept_id=dept_id, dept_name=dept_name, hod=hod).save()
     return render(request, 'add-department.html')
 
 
 def addsubject(request):
+    if request.method == 'POST':
+        subject_name = request.POST['subject_name']
+        subject_code = request.POST['subject_code']
+        semester = request.POST['semester']
+        subjects(subject_name=subject_name, subject_code=subject_code, semester=semester).save()
     return render(request, 'add-subject.html')
 
 
@@ -25,7 +30,7 @@ def addteacher(request):
         faculty_id = request.POST['faculty_id']
         name = request.POST['name']
         date_of_birth = request.POST['date_of_birth']
-        # gender = request.POST['gender']
+        gender = request.POST['gender']
         departments = request.POST['department']
         designation = request.POST['designation']
         expertise = request.POST['expertise']
@@ -42,7 +47,7 @@ def addteacher(request):
 
 
 def department(request):
-    dep = department.objects.all()
+    dep = departments.objects.all()
     return render(request, 'department.html', {'dep': dep})
 
 
@@ -59,6 +64,7 @@ def editteacher(request):
 
 
 def subject(request):
+    # subj = subjects.objects.all()
     return render(request, 'subjects.html')
 
 

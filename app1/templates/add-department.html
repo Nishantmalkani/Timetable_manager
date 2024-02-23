@@ -14,10 +14,7 @@
 						<div class="row align-items-center">
 							<div class="col">
 								<h3 class="page-title">Add Department</h3>
-								<ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{% url 'department' %}">Department</a></li>
-									<li class="breadcrumb-item active">Add Department</li>
-								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -37,7 +34,7 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Department ID <span class="login-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="dept_name">
+                                                    <input type="text" class="form-control" name="dept_id">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
@@ -77,5 +74,5 @@
 			</div>
 			<!-- /Page Wrapper -->
 
-        </div>
-		{% endblock body %}
+
+{% endblock body %}
