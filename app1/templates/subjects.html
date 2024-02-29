@@ -112,19 +112,20 @@
 												</tr>
 											</thead>
 											<tbody>
+                                            {% for i in sub %}
 												<tr>
 													<td>
 														<div class="form-check check-tables">
 															<input class="form-check-input" type="checkbox"  value="something">
 														</div>
 													</td>
-													<td>PRE2213</td>
+                                                    <td>{{ i.subject_code }}</td>
 													<td>
 														<h2>
-                                                            <a>Computer Networking</a>
+                                                            <a>{{ i.subject_name }}</a>
 														</h2>
 													</td>
-													<td>6</td>
+                                                    <td>{{ i.semester }}</td>
 													<td class="text-end">
 														<div class="actions">
 
@@ -135,12 +136,14 @@
 														</div>
 													</td>
 												</tr>
+                                            {% endfor %}
 											</tbody>
 										</table>
                                         <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                             aria-live="polite">Showing 1 to 6 of 6 entries
+                                             aria-live="polite">{{ sub.count }} Entries
                                         </div>
-                                        <a href="#" class="previous">&laquo; Previous</a>
+                                        </div>
+                                    <a href="#" class="previous">&laquo; Previous</a>
                                         <a href="#" class="next">Next &raquo;</a>
 
                                         <a href="#" class="previous round">&#8249;</a>
