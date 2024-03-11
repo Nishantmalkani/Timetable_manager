@@ -13,10 +13,11 @@ class departmentAdmin(admin.ModelAdmin):
     list_display = ('dept_id', 'dept_name', 'hod')
 
 
-@admin.register(faculty)
-class facultyAdmin(admin.ModelAdmin):
+@admin.register(Facultydetail)
+class FacultydetailAdmin(admin.ModelAdmin):
     list_display = (
-    'faculty_id', 'name', 'date_of_birth', 'gender', 'department', 'designation', 'expertise', 'qualification',
+        'faculty_id', 'faculty_name', 'date_of_birth', 'gender', 'department', 'designation', 'expertise',
+        'qualification',
     'join_date', 'address', 'phone', 'email', 'password')
 
 

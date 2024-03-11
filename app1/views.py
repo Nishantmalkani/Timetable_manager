@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 
 from .models import *
@@ -21,17 +23,25 @@ def addsubject(request):
         subject_code = request.POST['subject_code']
         subject_name = request.POST['subject_name']
         semester = request.POST['semester']
+        # print(subject_code,subject_name,semester,"ssssssssssssssssssss")
         subjects(subject_name=subject_name, subject_code=subject_code, semester=semester).save()
     return render(request, 'add-subject.html')
 
 
 def addteacher(request):
+    dept = departments.objects.all()
+    ran = random.randint(1111, 9999)
     if request.method == 'POST':
-        faculty_id = request.POST.get('faculty_id')
+        faculty_id = ran
         name = request.POST['name']
         date_of_birth = request.POST['date_of_birth']
-        gender = request.POST.get('gender')
-        departments = request.POST['department']
+        # gender = request.POST.get('gender')
+        department = request.POST['department']
+        for i in dept:
+            if department == i.dept_name:
+                d = departments.objects.get(pk=i.id)
+                # print(d,"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
+
         designation = request.POST['designation']
         expertise = request.POST['expertise']
         qualification = request.POST['qualification']
@@ -40,10 +50,14 @@ def addteacher(request):
         phone = request.POST['phone']
         email = request.POST['email']
         password = request.POST['password']
-        faculty(faculty_id=faculty_id, name=name, date_of_birth=date_of_birth, gender=gender, department=departments,
-                designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
-                phone=phone, address=address, email=email, password=password).save()
-    return render(request, 'add-teacher.html')
+        print(faculty_id, name, date_of_birth, department, designation, expertise, qualification, join_date, phone,
+              address, email, password)
+        Facultydetail(faculty_id=faculty_id, faculty_name=name, date_of_birth=date_of_birth, department=d,
+                      designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
+                      phone=phone, address=address, email=email, password=password).save()
+        return render(request, 'add-teacher.html', {'dept': dept})
+    else:
+        return render(request, 'add-teacher.html', {'dept': dept})
 
 
 def department(request):
@@ -73,7 +87,7 @@ def teacherdetails(request):
 
 
 def teacher(request):
-    fac = faculty.objects.all()
+    fac = Facultydetail.objects.all()
     return render(request, 'teachers.html', {'fac': fac})
 
 
