@@ -17,8 +17,7 @@ class departmentAdmin(admin.ModelAdmin):
 class FacultydetailAdmin(admin.ModelAdmin):
     list_display = (
         'faculty_id', 'faculty_name', 'date_of_birth', 'gender', 'department', 'designation', 'expertise',
-        'qualification',
-    'join_date', 'address', 'phone', 'email', 'password')
+        'qualification', 'join_date', 'address', 'phone', 'email', 'password')
 
 
 @admin.register(subjects)

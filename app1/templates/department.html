@@ -133,7 +133,10 @@
 												<td>180</td>
 												<td class="text-end">
 													<div class="actions">
-
+                                                        <a href="{% url 'delete_department' i.dept_id %}" methods="POST"
+                                                           class="btn btn-sm bg-danger-light">
+                                                            <i class="feather-trash-2"></i>
+                                                        </a>
                                                         <a href="{% url 'edit-department' %}"
                                                            class="btn btn-sm bg-danger-light">
 															<i class="feather-edit"></i>

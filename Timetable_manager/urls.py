@@ -39,6 +39,8 @@ urlpatterns = [
     path("forget-password/", views.forget_password, name="forget-password"),
     path("register/", views.register, name="register"),
     path("add-time-table/", views.add_timetable, name="add-time-table"),
+    path("delete_data/<int:id>/", views.delete_data, name="delete_data"),
+    path("delete_department/<int:id1>/", views.delete_department, name="delete_department"),
     
 ]
 

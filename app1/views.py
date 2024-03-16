@@ -1,6 +1,6 @@
 import random
 
-from django.shortcuts import render
+from django.shortcuts import *
 
 from .models import *
 
@@ -117,3 +117,17 @@ def register(request):
 
 def add_timetable(request):
     return render(request, 'add-time-table.html')
+
+
+def delete_data(request, id):
+    if request.method == 'POST':
+        pi = Facultydetail.objects.get(pk=id)
+        pi.delete()
+    return redirect('/teacher/')
+
+
+def delete_department(request, id1):
+    if request.method == 'POST':
+        pi = departments.objects.get(pk=id1)
+        pi.delete()
+    return redirect('/department/')
