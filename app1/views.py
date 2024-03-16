@@ -131,3 +131,10 @@ def delete_department(request, id1):
         pi = departments.objects.get(pk=id1)
         pi.delete()
     return redirect('/department/')
+
+
+def delete_subject(request, id2):
+    if request.method == 'POST':
+        pi = subjects.objects.get(pk=id2)
+        pi.delete()
+    return redirect('/subject/')
