@@ -121,20 +121,22 @@ def add_timetable(request):
 
 def delete_data(request, id):
     if request.method == 'POST':
-        pi = Facultydetail.objects.get(pk=id)
+        pi = Facultydetail.objects.get(pk=id,faculty_id=faculty_id, faculty_name=name, date_of_birth=date_of_birth, department=d,
+                      designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
+                      phone=phone, address=address, email=email, password=password)
         pi.delete()
-    return redirect('/teacher/')
+    return redirect('/teacher/', {'pi': pi})
 
 
-def delete_department(request, id1):
+def delete_department(request, id):
     if request.method == 'POST':
-        pi = departments.objects.get(pk=id1)
+        pi = departments.objects.get(pk=id, dept_id=dept_id, dept_name=dept_name, hod=hod)
         pi.delete()
-    return redirect('/department/')
+    return redirect('/department/', {'pi': pi}, {'id': id}, {'dept_id': dept_id}, {'dept_name': dept_name}, {'hod': hod})
 
 
-def delete_subject(request, id2):
+def delete_subject(request, id):
     if request.method == 'POST':
-        pi = subjects.objects.get(pk=id2)
+        pi = subjects.objects.get(pk=id, subject_name=subject_name, subject_code=subject_code, semester=semester)
         pi.delete()
-    return redirect('/subject/')
+    return redirect('/subject/', {'pi': pi})
