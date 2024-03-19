@@ -130,9 +130,9 @@ def delete_data(request, id):
 
 def delete_department(request, id):
     if request.method == 'POST':
-        pi = departments.objects.get(pk=id, dept_id=dept_id, dept_name=dept_name, hod=hod)
+        pi = departments.objects.get(pk=id)
         pi.delete()
-    return redirect('/department/', {'pi': pi}, {'id': id}, {'dept_id': dept_id}, {'dept_name': dept_name}, {'hod': hod})
+    return redirect('/department/', {'pi': pi})
 
 
 def delete_subject(request, id):
