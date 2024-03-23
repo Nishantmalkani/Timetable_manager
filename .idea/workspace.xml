@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/AUTHORS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/REQUESTED" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip-23.2.1.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/autocompletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/autocompletion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/base_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/base_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/cmdoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/cmdoptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/req_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/cli/req_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/completion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/commands/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/installed.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/installed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/sdist.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/sdist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/distributions/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/collector.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/collector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/package_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/package_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/sources.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/index/sources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/locations/_distutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/locations/_distutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/_dists.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/_dists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/_envs.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/importlib/_envs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/pkg_resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/metadata/pkg_resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/candidate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/direct_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/direct_url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/format_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/format_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/installation_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/installation_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/link.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/link.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/target_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/models/target_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/xmlrpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/network/xmlrpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/build/build_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/build/build_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/install/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/install/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/operations/prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/pyproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/pyproject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/constructors.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/constructors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_set.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/req/req_uninstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/legacy/resolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/legacy/resolver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/requirements.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/requirements.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/resolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/resolver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/self_outdated_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/self_outdated_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/egg_link.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/egg_link.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/inject_securetransport.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/subprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/subprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/temp_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/temp_dir.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/utils/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/git.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/git.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/mercurial.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/mercurial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/versioncontrol.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/vcs/versioncontrol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/wheel_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_internal/wheel_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/_cmd.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/_cmd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/filewrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/filewrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/heuristics.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/heuristics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/serialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/serialize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/cachecontrol/wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/certifi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/certifi/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/certifi/cacert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/certifi/cacert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/manifest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/manifest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/markers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/distlib/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/util/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/util/retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="Timetable_manager" is-module-sdk="true">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+    <option name="myUseModuleSdk" value="true" />
+    <option name="myModuleName" value="Timetable_manager" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app1/templates/index.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2af5r65Myx1vkV6rOGIDldatGBa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.Timetable_manager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nishantmalkani/PycharmProjects/Timetable_manager/app1/static/assets/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myCodeCompletionOption" value="Runtime" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app1/static/assets/img" />
+      <recent name="$PROJECT_DIR$/app1/static" />
+      <recent name="$PROJECT_DIR$/app1/static/assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Timetable_manager" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Timetable_manager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Timetable_manager.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment="" />
+      <created>1704696988283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704696988283</updated>
+      <workItem from="1704697044269" duration="46000" />
+      <workItem from="1704914134194" duration="4000" />
+      <workItem from="1704965358637" duration="501000" />
+      <workItem from="1704966272797" duration="436000" />
+      <workItem from="1705076592477" duration="140000" />
+      <workItem from="1705126856678" duration="4498000" />
+      <workItem from="1705172927413" duration="80000" />
+      <workItem from="1705173020948" duration="73000" />
+      <workItem from="1705173189740" duration="356000" />
+      <workItem from="1705388286765" duration="1982000" />
+      <workItem from="1705390281585" duration="1430000" />
+      <workItem from="1705471711291" duration="761000" />
+      <workItem from="1705472712796" duration="511000" />
+      <workItem from="1705473231470" duration="381000" />
+      <workItem from="1705473617612" duration="500000" />
+      <workItem from="1705481875537" duration="32000" />
+      <workItem from="1705481914414" duration="27000" />
+      <workItem from="1705499103353" duration="1166000" />
+      <workItem from="1705500307795" duration="183000" />
+      <workItem from="1705500503882" duration="165000" />
+      <workItem from="1706018811374" duration="21000" />
+      <workItem from="1706018839985" duration="308000" />
+      <workItem from="1706019156757" duration="48000" />
+      <workItem from="1706019210676" duration="74000" />
+      <workItem from="1706019743611" duration="2583000" />
+      <workItem from="1706022331905" duration="312000" />
+      <workItem from="1706030266708" duration="117000" />
+      <workItem from="1706030392806" duration="3000" />
+      <workItem from="1706030511444" duration="224000" />
+      <workItem from="1706030740682" duration="52000" />
+      <workItem from="1706030818861" duration="428000" />
+      <workItem from="1706031375871" duration="289000" />
+      <workItem from="1706031672512" duration="2438000" />
+      <workItem from="1706035038337" duration="308000" />
+      <workItem from="1706121557661" duration="1572000" />
+      <workItem from="1706124368641" duration="719000" />
+      <workItem from="1706361295470" duration="126000" />
+      <workItem from="1706361834536" duration="282000" />
+      <workItem from="1706497856761" duration="1550000" />
+      <workItem from="1706499858071" duration="1803000" />
+      <workItem from="1706502685540" duration="652000" />
+      <workItem from="1706506606525" duration="1268000" />
+      <workItem from="1706516716680" duration="2831000" />
+      <workItem from="1706546869991" duration="694000" />
+      <workItem from="1706598710667" duration="110000" />
+      <workItem from="1706682345273" duration="1011000" />
+      <workItem from="1706686834165" duration="1000" />
+      <workItem from="1706687972680" duration="1079000" />
+      <workItem from="1706693672066" duration="199000" />
+      <workItem from="1706763890842" duration="813000" />
+      <workItem from="1706775500344" duration="1774000" />
+      <workItem from="1706781402591" duration="2292000" />
+      <workItem from="1706810455189" duration="2942000" />
+      <workItem from="1706848576787" duration="1345000" />
+      <workItem from="1706901362132" duration="489000" />
+      <workItem from="1706947416815" duration="1578000" />
+      <workItem from="1706953678655" duration="957000" />
+      <workItem from="1707149353236" duration="1661000" />
+      <workItem from="1707229808911" duration="6000" />
+      <workItem from="1707231592886" duration="13000" />
+      <workItem from="1707501318901" duration="6911000" />
+      <workItem from="1707554310939" duration="2000" />
+      <workItem from="1707574043293" duration="1405000" />
+      <workItem from="1707587805793" duration="1245000" />
+      <workItem from="1707745473855" duration="99000" />
+      <workItem from="1707763708965" duration="52000" />
+      <workItem from="1707891160136" duration="3061000" />
+      <workItem from="1707928724765" duration="1459000" />
+      <workItem from="1707976130105" duration="1671000" />
+      <workItem from="1707978467651" duration="601000" />
+      <workItem from="1707980814711" duration="882000" />
+      <workItem from="1708007519987" duration="5647000" />
+      <workItem from="1708018970237" duration="2427000" />
+      <workItem from="1708100331308" duration="2988000" />
+      <workItem from="1708119993681" duration="4293000" />
+      <workItem from="1708124447700" duration="1293000" />
+      <workItem from="1708195782907" duration="1962000" />
+      <workItem from="1708244192337" duration="771000" />
+      <workItem from="1708252553184" duration="1514000" />
+      <workItem from="1708254940829" duration="467000" />
+      <workItem from="1708273849908" duration="3005000" />
+      <workItem from="1708363339543" duration="1287000" />
+      <workItem from="1708366003944" duration="104000" />
+      <workItem from="1708368455511" duration="10000" />
+      <workItem from="1708402659331" duration="1058000" />
+      <workItem from="1708406805373" duration="475000" />
+      <workItem from="1708407886190" duration="71000" />
+      <workItem from="1708408062840" duration="941000" />
+      <workItem from="1708409120204" duration="8763000" />
+      <workItem from="1708498760050" duration="37000" />
+      <workItem from="1708533170422" duration="5255000" />
+      <workItem from="1708541251585" duration="2899000" />
+      <workItem from="1708577338261" duration="4080000" />
+      <workItem from="1708617738744" duration="5939000" />
+      <workItem from="1708625816934" duration="1892000" />
+      <workItem from="1708671412510" duration="32000" />
+      <workItem from="1708676697533" duration="43000" />
+      <workItem from="1708698829592" duration="4502000" />
+      <workItem from="1708707538023" duration="1013000" />
+      <workItem from="1708802301665" duration="2000" />
+      <workItem from="1708802601947" duration="4000" />
+      <workItem from="1708867081376" duration="3083000" />
+      <workItem from="1708886300952" duration="1569000" />
+      <workItem from="1709059559923" duration="2587000" />
+      <workItem from="1709062157716" duration="169000" />
+      <workItem from="1709232323611" duration="2318000" />
+      <workItem from="1709236090740" duration="70000" />
+      <workItem from="1709288060318" duration="624000" />
+      <workItem from="1709703561443" duration="796000" />
+      <workItem from="1709704362415" duration="4592000" />
+      <workItem from="1710097929180" duration="4192000" />
+      <workItem from="1710139950186" duration="3790000" />
+      <workItem from="1710185057226" duration="3141000" />
+      <workItem from="1710351884363" duration="888000" />
+      <workItem from="1710483540153" duration="4165000" />
+      <workItem from="1710592929934" duration="11828000" />
+      <workItem from="1710615773051" duration="1937000" />
+      <workItem from="1710696286462" duration="78000" />
+      <workItem from="1710775078985" duration="633000" />
+      <workItem from="1710879236744" duration="2906000" />
+      <workItem from="1710918207717" duration="166000" />
+      <workItem from="1710999851344" duration="540000" />
+      <workItem from="1711000430048" duration="525000" />
+      <workItem from="1711001457422" duration="85000" />
+      <workItem from="1711001550611" duration="503000" />
+      <workItem from="1711002151918" duration="895000" />
+      <workItem from="1711003102277" duration="433000" />
+      <workItem from="1711004165354" duration="449000" />
+      <workItem from="1711014216319" duration="586000" />
+      <workItem from="1711039838635" duration="796000" />
+      <workItem from="1711043525648" duration="18000" />
+      <workItem from="1711190466565" duration="518000" />
+    </task>
+    <task id="LOCAL-00001" summary="updated index page">
+      <option name="closed" value="true" />
+      <created>1705391183979</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705391183979</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated index page">
+      <option name="closed" value="true" />
+      <created>1706035068270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706035068270</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1706684875337</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706684875337</updated>
+    </task>
+    <task id="LOCAL-00004" summary=".">
+      <option name="closed" value="true" />
+      <created>1706684879873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706684879873</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1706810485272</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706810485272</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <option name="closed" value="true" />
+      <created>1706811875024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706811875024</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".">
+      <option name="closed" value="true" />
+      <created>1706814423595</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706814423595</updated>
+    </task>
+    <task id="LOCAL-00008" summary=".">
+      <option name="closed" value="true" />
+      <created>1706901376723</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706901376723</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".">
+      <option name="closed" value="true" />
+      <created>1706947422299</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706947422299</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <option name="closed" value="true" />
+      <created>1706953684441</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706953684441</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1707149362045</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707149362045</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1707508031211</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707508031211</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".">
+      <option name="closed" value="true" />
+      <created>1707588995627</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707588995627</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".">
+      <option name="closed" value="true" />
+      <created>1707928776314</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707928776314</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".">
+      <option name="closed" value="true" />
+      <created>1707933299592</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707933299592</updated>
+    </task>
+    <task id="LOCAL-00016" summary=".">
+      <option name="closed" value="true" />
+      <created>1708103425287</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708103425287</updated>
+    </task>
+    <task id="LOCAL-00017" summary=".">
+      <option name="closed" value="true" />
+      <created>1708122310110</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708122310110</updated>
+    </task>
+    <task id="LOCAL-00018" summary=".">
+      <option name="closed" value="true" />
+      <created>1708123421891</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708123421891</updated>
+    </task>
+    <task id="LOCAL-00019" summary=".">
+      <option name="closed" value="true" />
+      <created>1708124206503</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708124206503</updated>
+    </task>
+    <task id="LOCAL-00020" summary=".">
+      <option name="closed" value="true" />
+      <created>1708124274693</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1708124274693</updated>
+    </task>
+    <task id="LOCAL-00021" summary=".">
+      <option name="closed" value="true" />
+      <created>1708195828523</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708195828523</updated>
+    </task>
+    <task id="LOCAL-00022" summary=".">
+      <option name="closed" value="true" />
+      <created>1708254790799</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708254790799</updated>
+    </task>
+    <task id="LOCAL-00023" summary=".">
+      <option name="closed" value="true" />
+      <created>1708276825642</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708276825642</updated>
+    </task>
+    <task id="LOCAL-00024" summary=".">
+      <option name="closed" value="true" />
+      <created>1708363377001</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708363377001</updated>
+    </task>
+    <task id="LOCAL-00025" summary="CRUD operations">
+      <option name="closed" value="true" />
+      <created>1708533395080</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708533395080</updated>
+    </task>
+    <task id="LOCAL-00026" summary=".">
+      <option name="closed" value="true" />
+      <created>1708534351194</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708534351194</updated>
+    </task>
+    <task id="LOCAL-00027" summary=".">
+      <option name="closed" value="true" />
+      <created>1708676714095</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708676714095</updated>
+    </task>
+    <task id="LOCAL-00028" summary=".">
+      <option name="closed" value="true" />
+      <created>1708676729038</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708676729038</updated>
+    </task>
+    <task id="LOCAL-00029" summary=".">
+      <option name="closed" value="true" />
+      <created>1709233005602</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709233005602</updated>
+    </task>
+    <task id="LOCAL-00030" summary=".">
+      <option name="closed" value="true" />
+      <created>1710143601273</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1710143601273</updated>
+    </task>
+    <task id="LOCAL-00031" summary=".">
+      <option name="closed" value="true" />
+      <created>1710601167600</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1710601167600</updated>
+    </task>
+    <task id="LOCAL-00032" summary=".">
+      <option name="closed" value="true" />
+      <created>1710601476161</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1710601476161</updated>
+    </task>
+    <task id="LOCAL-00033" summary=".">
+      <option name="closed" value="true" />
+      <created>1710881553488</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1710881553488</updated>
+    </task>
+    <task id="LOCAL-00034" summary=".">
+      <option name="closed" value="true" />
+      <created>1711040616485</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1711040616485</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="updated index page" />
+    <MESSAGE value="CRUD operations" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app1/models.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Timetable_manager/Timetable_manager/urls.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app1/models.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/app1/templates/department.html</url>
+          <line>124</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/app1/templates/subjects.html</url>
+          <line>3</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
