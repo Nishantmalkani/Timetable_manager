@@ -66,6 +66,7 @@ def department(request):
 
 
 def editdepartment(request):
+
     return render(request, 'edit-department.html')
 
 
@@ -120,21 +121,23 @@ def add_timetable(request):
 
 
 def delete_data(request, id):
+    # pi = None
+    pi = get_object_or_404(Facultydetail, pk=id)
     if request.method == 'POST':
-        pi = Facultydetail.objects.get(pk=id)
         pi.delete()
     return redirect('/teacher/', {'pi': pi})
 
-
 def delete_department(request, id1):
+    # pi1 = None
+    pi1 = get_object_or_404(departments, pk=id1)
     if request.method == 'POST':
-        pi = departments.objects.get(pk=id1)
-        pi.delete()
-    return redirect('/department/', {'pi': pi}, {'id1': id1})
+        pi1.delete()
+    return HttpResponseRedirect('/department/', {'pi1': pi1}, {'id1': id1})
 
 
 def delete_subject(request, id2):
+    # pi3 = None
+    pi3 = get_object_or_404(subjects, pk=id2)
     if request.method == 'POST':
-        pi = subjects.objects.get(pk=id2)
-        pi.delete()
-    return redirect('/subject/', {'pi': pi})
+        pi3.delete()
+    return redirect('subject', {'pi3': pi3})

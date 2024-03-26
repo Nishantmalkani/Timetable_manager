@@ -130,7 +130,8 @@
 														<div class="actions">
                                                             <form action="{% url 'delete_subject' i.subject_code %}" method="POST">
                                                                 {% csrf_token %}
-                                                                <button type="submit" value="submit" class="btn btn-sm bg-danger-light">
+                                                                <button type="submit"
+                                                                        class="btn btn-sm bg-danger-light">
                                                                     <i class="feather-trash-2"></i>
                                                                 </button>
                                                             </form>
@@ -145,7 +146,7 @@
 											</tbody>
 										</table>
                                         <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                             aria-live="polite">{{ sub.count }} Entries
+                                             aria-live="polite">Showing {{ sub.count }} entries
                                         </div>
                                         </div>
                                     <a href="#" class="previous">&laquo; Previous</a>

@@ -133,10 +133,13 @@
 												<td>180</td>
 												<td class="text-end">
 													<div class="actions">
-                                                        <a href="{% url 'delete_department' i.dept_id %}" methods="POST"
-                                                           class="btn btn-sm bg-danger-light">
-                                                            <i class="feather-trash-2"></i>
-                                                        </a>
+                                                        <form action="{% url 'delete_department' i.dept_id %}"
+                                                              method="POST">
+                                                            {% csrf_token %}
+                                                            <button type="submit" class="btn btn-sm bg-danger-light">
+                                                                <i class="feather-trash-2"></i>
+                                                            </button>
+                                                        </form>
                                                         <a href="{% url 'edit-department' %}"
                                                            class="btn btn-sm bg-danger-light">
 															<i class="feather-edit"></i>
@@ -149,7 +152,7 @@
 										</tbody>
 									</table>
                                     <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                         aria-live="polite">Showing 1 to 6 of 6 entries
+                                         aria-live="polite">Showing {{ dep.count }}
                                     </div>
                                     <a href="#" class="previous">&laquo; Previous</a>
                                     <a href="#" class="next">Next &raquo;</a>

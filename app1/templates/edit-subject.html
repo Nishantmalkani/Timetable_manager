@@ -25,27 +25,31 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form>
+                                    <form method="post">
+                                        {% csrf_token %}
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Subject Information</span></h5>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
-                                                    <label>Subject Code <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="PRE1534">
+                                                    <label>subject_code <span class="login-danger">*</span></label>
+                                                    <input name="subject_code" type="text" class="form-control"
+                                                           value="{{ subject_code }}">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
-													<label>Subject Name <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Botony">
+                                                    <label> subject name <span class="login-danger">*</span></label>
+                                                    <input name="subject_name" type="text" class="form-control"
+                                                           value="{{ subject.name }}">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
                                                     <label> Semester <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="9">
+                                                    <input name="semester" type="text" class="form-control"
+                                                           value="{{ subject.semester }}">
 												</div>
 											</div>
 											<div class="col-12">
