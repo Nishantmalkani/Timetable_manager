@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable_manager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable_manager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/templates/department.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/department.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/templates/edit-subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/edit-subject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/templates/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/subjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/templates/teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/teachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment="." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +83,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.sync",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
@@ -290,7 +279,7 @@
       <workItem from="1711448702060" duration="217000" />
       <workItem from="1711448972938" duration="6000" />
       <workItem from="1711474947619" duration="9000" />
-      <workItem from="1711482253742" duration="3581000" />
+      <workItem from="1711482253742" duration="3900000" />
     </task>
     <task id="LOCAL-00001" summary="updated index page">
       <option name="closed" value="true" />
@@ -588,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711199952109</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary=".">
+      <option name="closed" value="true" />
+      <created>1711486094823</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486094823</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
