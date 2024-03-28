@@ -39,9 +39,9 @@ urlpatterns = [
     path("forget-password/", views.forget_password, name="forget-password"),
     path("register/", views.register, name="register"),
     path("add-time-table/", views.add_timetable, name="add-time-table"),
-    path("delete_data/<int:id>/", views.delete_data, name="delete_data"),
-    path("delete_department/<int:id1>/", views.delete_department, name="delete_department"),
-    path("delete_subject/<int:id2>/", views.delete_subject, name="delete_subject"),
+    path("subject/<int:faculty_id>/", views.delete_data, name="delete_data"),
+    path("department/<int:dept_id>/", views.delete_department, name="delete_department"),
+    path("subject/<int:subject_code>/", views.delete_subjects, name="delete_subjects"),
 ]
 
 

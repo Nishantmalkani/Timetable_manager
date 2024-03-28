@@ -120,24 +120,24 @@ def add_timetable(request):
     return render(request, 'add-time-table.html')
 
 
-def delete_data(request, id):
+def delete_data(request, faculty_id):
     # pi = None
-    pi = get_object_or_404(Facultydetail, pk=id)
+    pi = get_object_or_404(Facultydetail, faculty_id=faculty_id)
     if request.method == 'POST':
         pi.delete()
     return redirect('/teacher/', {'pi': pi})
 
-def delete_department(request, id1):
+
+def delete_department(request, dept_id):
     # pi1 = None
-    pi1 = get_object_or_404(departments, pk=id1)
+    pi1 = get_object_or_404(departments, dept_id=dept_id)
     if request.method == 'POST':
         pi1.delete()
-    return HttpResponseRedirect('/department/', {'pi1': pi1}, {'id1': id1})
+    return redirect('/department/')  # Remove unnecessary arguments
 
 
-def delete_subject(request, id2):
-    # pi3 = None
-    pi3 = get_object_or_404(subjects, pk=id2)
+def delete_subjects(request, subject_code):
+    subject = get_object_or_404(subjects, subject_code=subject_code)
     if request.method == 'POST':
-        pi3.delete()
-    return redirect('subject', {'pi3': pi3})
+        subject.delete()
+    return redirect('/subject/')  # Remove unnecessary arguments

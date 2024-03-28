@@ -128,13 +128,16 @@
                                                     <td>{{ i.semester }}</td>
 													<td class="text-end">
 														<div class="actions">
-                                                            <form action="{% url 'delete_subject' i.subject_code %}" method="POST">
+
+                                                            <form action="{% url 'delete_subjects' i.subject_code %}"
+                                                                  method="POST">
                                                                 {% csrf_token %}
-                                                                <button type="submit"
+                                                                <button type="submit" value="Delete"
                                                                         class="btn btn-sm bg-danger-light">
                                                                     <i class="feather-trash-2"></i>
                                                                 </button>
                                                             </form>
+
                                                             <a href="{% url 'editsubject' %}"
                                                                class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
