@@ -2,7 +2,7 @@ from django.db import models
 
 
 class departments(models.Model):
-    dept_id = models.CharField(max_length=500)
+    dept_id = models.CharField(max_length=500, unique=True)
     dept_name = models.CharField(max_length=500)
     hod = models.CharField(max_length=500)
 
@@ -38,7 +38,7 @@ class Facultydetail(models.Model):
     password = models.CharField(max_length=500)
 
 class subjects(models.Model):
-    subject_code = models.CharField(max_length=500)
+    subject_code = models.CharField(max_length=500, unique=True)
     subject_name = models.CharField(max_length=500)
     semester = models.IntegerField()
 

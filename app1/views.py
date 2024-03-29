@@ -14,7 +14,14 @@ def adddepartment(request):
         dept_id = request.POST['dept_id']
         dept_name = request.POST['dept_name']
         hod = request.POST['hod']
-        departments(dept_id=dept_id, dept_name=dept_name, hod=hod).save()
+
+        if departments.objects.filter(dept_id=dept_id).exists():
+            raise ValueError(f"A department with dept_id {dept_id} already exists.")
+        else:
+            department = departments(dept_id=dept_id, dept_name=dept_name, hod=hod)
+            department.save()
+            return redirect('/department/')   
+
     return render(request, 'add-department.html')
 
 
@@ -23,8 +30,14 @@ def addsubject(request):
         subject_code = request.POST['subject_code']
         subject_name = request.POST['subject_name']
         semester = request.POST['semester']
+
+        if subjects.objects.filter(subject_code=subject_code).exists():
+            raise ValueError(f"A subject with subject_code {subject_code} already exists.")
+        else:
+            subjects(subject_name=subject_name, subject_code=subject_code, semester=semester).save()
+            return redirect('/subject/')
         # print(subject_code,subject_name,semester,"ssssssssssssssssssss")
-        subjects(subject_name=subject_name, subject_code=subject_code, semester=semester).save()
+
     return render(request, 'add-subject.html')
 
 
@@ -65,16 +78,35 @@ def department(request):
     return render(request, 'department.html', {'dep': dep})
 
 
-def editdepartment(request):
+def editdepartment(request, dept_id):
+    depart = departments.objects.get(dept_id=dept_id)
+    if request.method == 'POST':
+        depart.dept_id = request.POST['dept_id']
+        depart.dept_name = request.POST['dept_name']
+        depart.hod = request.POST['hod']
+        depart.save()
+        return redirect('/department/')
+    return render(request, 'edit-department.html', {'depart': depart})
 
-    return render(request, 'edit-department.html')
 
-
-def editsubject(request):
-    return render(request, 'edit-subject.html')
+def editsubject(request, subject_code):
+    sub = subjects.objects.get(subject_code=subject_code)
+    # print(sub,"jjjjjjjjjjjjjjjjjjjjjjj")
+    if request.method == "POST":
+        sub.subject_name = request.POST["subject_name"]
+        sub.subject_code = request.POST["subject_code"]
+        sub.semester = request.POST["semester"]
+        sub.save()
+        return redirect('/subject/')
+    return render(request, 'edit-subject.html', {'sub': sub})
 
 
 def editteacher(request):
+    # tch = Facultydetail.objects.get(faculty_id=faculty_id)
+    # if request.method =="POST" :
+    #     tch.faculty_id = request.POST['faculty_id']
+    #     tch.faculty_name = request.POST['faculty_name']
+    #     tch.date_of_birth = request.POST['date_of_birth']
     return render(request, 'edit-teacher.html')
 
 

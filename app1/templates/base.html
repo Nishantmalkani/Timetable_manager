@@ -132,7 +132,9 @@
 								<ul>
 									<li><a href="{% url 'department' %}">Department List</a></li>
 									<li><a href="{% url 'add-department' %}">Department Add</a></li>
-									<li><a href="{% url 'edit-department' %}">Department Edit</a></li>
+                                    {% comment %}
+                                        <li><a href="{% url 'edit-department' %}">Department Edit</a>
+                                        </li> {% endcomment %}
 								</ul>
 							</li>
                             <li class="submenu">
@@ -142,7 +144,8 @@
                                     <li><a href="{% url 'teacher' %}">Faculty List</a></li>
                                     <li><a href="{% url 'teacher-details' %}">Faculty View</a></li>
                                     <li><a href="{% url 'add-teacher' %}">Faculty Add</a></li>
-                                    <li><a href="{% url 'edit-teacher' %}">Faculty Edit</a></li>
+                                    {% comment %}
+                                        <li><a href="{% url 'edit-teacher' %}">Faculty Edit</a></li> {% endcomment %}
 								</ul>
 							</li>
 							<li class="submenu">
@@ -150,7 +153,8 @@
 								<ul>
 									<li><a href="{% url 'subject' %}">Subject List</a></li>
 									<li><a href="{% url 'add-subject' %}">Subject Add</a></li>
-									<li><a href="{% url 'editsubject' %}">Subject Edit</a></li>
+                                    {% comment %}
+                                        <li><a href="{% url 'editsubject' %}">Subject Edit</a></li> {% endcomment %}
 								</ul>
 							</li>
 							

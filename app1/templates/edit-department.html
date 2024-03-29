@@ -25,7 +25,8 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form>
+                                    <form method="POST">
+                                        {% csrf_token %}
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Department Details</span></h5>
@@ -33,19 +34,22 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Department ID <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="PRE1534">
+                                                    <input type="text" class="form-control" value="{{ depart.dept_id }}"
+                                                           name="dept_id">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Department Name <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="MCA">
+                                                    <input type="text" class="form-control"
+                                                           value="{{ depart.dept_name }}" name="dept_name">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Head of Department <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Lois A">
+                                                    <input type="text" class="form-control" value="{{ depart.hod }}"
+                                                           name="hod">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
