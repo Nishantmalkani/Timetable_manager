@@ -39,15 +39,18 @@
                                 </p>
 								<h2>Sign in</h2>
 								<!-- Form -->
-                                <form action="{% url 'index' %}">
+                                <form action="{% url 'index' %}" method="POST">
+                                    {% csrf_token %}
 									<div class="form-group">
-										<label >Username <span class="login-danger">*</span></label>
-										<input class="form-control" type="text" >
+                                        <label for="username">Username <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" name="username" id="username"
+                                               placeholder="Enter your username"/>
 										<span class="profile-views"><i class="fas fa-user-circle"></i></span>
 									</div>
 									<div class="form-group">
-										<label >Password <span class="login-danger">*</span></label>
-										<input class="form-control pass-input" type="text" >
+                                        <label for="password">Password <span class="login-danger">*</span></label>
+                                        <input class="form-control pass-input" type="text" name="password" id="password"
+                                               placeholder="Enter your password"/>
 										<span class="profile-views feather-eye toggle-password"></span>
 									</div>
 									<div class="forgotpass">
@@ -60,23 +63,33 @@
                                         <a href="{% url 'forget-password' %}">Forgot Password?</a>
 									</div>
 									<div class="form-group">
-										<button class="btn btn-primary btn-block" type="submit">Login</button>
+                                        <button class="btn btn-primary btn-block" type="submit" value="Login">Login
+                                        </button>
 									</div>
 								</form>
-								<!-- /Form -->
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-{{ message.tags }}">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                <!-- /Form -->
 
-								<div class="login-or">
+                                {% comment %}
+                                    <div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
-								</div>
+                                    </div> {% endcomment %}
 
 								<!-- Social Login -->
-								<div class="social-login">
+                                {% comment %}
+                                    <div class="social-login">
 									<a href="#" ><i class="fab fa-google-plus-g"></i></a>
 									<a href="#" ><i class="fab fa-facebook-f"></i></a>
 									<a href="#" ><i class="fab fa-twitter"></i></a>
 									<a href="#" ><i class="fab fa-linkedin-in"></i></a>
-								</div>
+                                    </div> {% endcomment %}
 								<!-- /Social Login -->
 
 							</div>

@@ -1,10 +1,14 @@
-import random
+from datetime import datetime
 
+from django.contrib import messages
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import *
 
 from .models import *
 
 
+# @login_required(login_url='login')
 def demo1(request):
     return render(request, 'index.html')
 
@@ -43,11 +47,12 @@ def addsubject(request):
 
 def addteacher(request):
     dept = departments.objects.all()
-    ran = random.randint(1111, 9999)
+    # ran = random.randint(1111, 9999)
     if request.method == 'POST':
-        faculty_id = ran
+        faculty_id = request.POST['faculty_id']
         name = request.POST['name']
-        date_of_birth = request.POST['date_of_birth']
+        date_of_birth_string = request.POST['date_of_birth']
+        date_of_birth = datetime.strptime(date_of_birth_string, '%Y-%m-%d').date()
         # gender = request.POST.get('gender')
         department = request.POST['department']
         for i in dept:
@@ -60,17 +65,43 @@ def addteacher(request):
         qualification = request.POST['qualification']
         join_date = request.POST['join_date']
         address = request.POST['address']
+        city = request.POST['city']
+        state = request.POST['state']
+        country = request.POST['country']
+        zipcode = request.POST['zipcode']
+        username = request.POST['username']
         phone = request.POST['phone']
         email = request.POST['email']
         password = request.POST['password']
-        print(faculty_id, name, date_of_birth, department, designation, expertise, qualification, join_date, phone,
-              address, email, password)
-        Facultydetail(faculty_id=faculty_id, faculty_name=name, date_of_birth=date_of_birth, department=d,
-                      designation=designation, expertise=expertise, qualification=qualification, join_date=join_date,
-                      phone=phone, address=address, email=email, password=password).save()
-        return render(request, 'add-teacher.html', {'dept': dept})
-    else:
-        return render(request, 'add-teacher.html', {'dept': dept})
+        if Facultydetail.objects.filter(faculty_id=faculty_id).exists():
+            raise ValueError(f"A teacher with faculty_id {faculty_id} already exists.")
+        else:
+
+            print(faculty_id, name, date_of_birth, department, designation, expertise, qualification, join_date,
+                  username, phone,
+                  address, city, state, country, zipcode, username, email, password)
+            Facultydetail.objects.create(
+                faculty_id=faculty_id,
+                faculty_name=name,
+                date_of_birth=date_of_birth,
+                department=d,
+                designation=designation,
+                expertise=expertise,
+                qualification=qualification,
+                join_date=join_date,
+                username=username,
+                phone=phone,
+                address=address,
+                city=city,
+                state=state,
+                country=country,
+                zipcode=zipcode,
+                email=email,
+                password=password
+            )
+            return redirect('/teacher/')
+
+    return render(request, 'add-teacher.html', {'dept': dept})
 
 
 def department(request):
@@ -101,14 +132,41 @@ def editsubject(request, subject_code):
     return render(request, 'edit-subject.html', {'sub': sub})
 
 
-def editteacher(request):
-    # tch = Facultydetail.objects.get(faculty_id=faculty_id)
-    # if request.method =="POST" :
-    #     tch.faculty_id = request.POST['faculty_id']
-    #     tch.faculty_name = request.POST['faculty_name']
-    #     tch.date_of_birth = request.POST['date_of_birth']
-    return render(request, 'edit-teacher.html')
+def editteacher(request, faculty_id):
+    tch = Facultydetail.objects.get(faculty_id=faculty_id)
+    deps = departments.objects.get(dept_id=tch.department.dept_id)
+    if request.method == "POST":
+        tch.faculty_id = request.POST['faculty_id']
+        tch.faculty_name = request.POST['faculty_name']
 
+        date_of_birth_string = request.POST['date_of_birth']
+        date_of_birth = datetime.strptime(date_of_birth_string, '%Y-%m-%d').date()
+        tch.date_of_birth = date_of_birth
+
+        department_name = request.POST.get('department')
+        if department_name == deps.dept_name:
+            tch.department = deps
+
+        tch.designation = request.POST['designation']
+        tch.expertise = request.POST['expertise']
+        tch.qualification = request.POST['qualification']
+
+        join_date_string = request.POST['join_date']
+        join_date = datetime.strptime(join_date_string, '%Y-%m-%d').date()
+        tch.join_date = join_date
+
+        tch.phone = request.POST['phone']
+        tch.address = request.POST['address']
+        tch.city = request.POST['city']
+        tch.state = request.POST['state']
+        tch.country = request.POST['country']
+        tch.zipcode = request.POST['zipcode']
+        tch.username = request.POST['username']
+        tch.email = request.POST['email']
+        tch.password = request.POST['password']
+        tch.save()
+        return redirect('/teacher/')
+    return render(request, 'edit-teacher.html', {'tch': tch, 'deps': deps})
 
 def subject(request):
     sub = subjects.objects.all()
@@ -128,8 +186,30 @@ def timetable(request):
     return render(request, 'time-table.html')
 
 
+# @login_required(login_url='dashboard')
 def login(request):
-    return render(request, 'login.html')
+    if request.method == 'POST':
+        login_form = AuthenticationForm(request, data=request.POST)
+        if login_form.is_valid():
+            username = login_form.cleaned_data.get('username')
+            password = login_form.cleaned_data.get('password')
+            authenticated_user = authenticate(request, username=username, password=password)
+            if authenticated_user is not None:
+                if Facultydetail.objects.filter(user=authenticated_user).exists():
+                    auth_login(request, authenticated_user)
+                    messages.success(request, "You have successfully logged in")
+                    return redirect('dashboard')
+                else:
+                    messages.error(request, "Faculty detail does not exist")
+            else:
+                messages.error(request, "Invalid username or password")
+        else:
+            messages.error(request, "Username and password are required")
+    else:
+        login_form = AuthenticationForm()
+        if not login_form:
+            messages.error(request, "The page is blank")
+    return render(request, 'login.html', {'login_form': login_form})
 
 
 def profile(request):

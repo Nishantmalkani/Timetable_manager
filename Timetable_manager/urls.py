@@ -20,6 +20,7 @@ from app1 import views
 from app1.views import *
 
 urlpatterns = [
+
     path("admin/", admin.site.urls),
     path("", views.demo1, name='index'),
     path("add-department/", views.adddepartment, name='add-department'),
@@ -28,7 +29,7 @@ urlpatterns = [
     path("editsubject/<int:subject_code>", views.editsubject, name='editsubject'),
     path("department/", views.department, name='department'),
     path("edit-department/<int:dept_id>", views.editdepartment, name='edit-department'),
-    path("edit-teacher/", views.editteacher, name='edit-teacher'),
+    path("edit-teacher/<int:faculty_id>", views.editteacher, name='edit-teacher'),
     path("subject/", views.subject, name='subject'),
     path("teacher-details/", views.teacherdetails, name='teacher-details'),
     path("teacher/", views.teacher, name='teacher'),
@@ -43,5 +44,3 @@ urlpatterns = [
     path("department/<int:dept_id>/", views.delete_department, name="delete_department"),
     path("subject/<int:subject_code>/", views.delete_subjects, name="delete_subjects"),
 ]
-
-

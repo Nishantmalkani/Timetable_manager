@@ -24,7 +24,9 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <form>
+                            <form method="POST">
+                                {% csrf_token %}
+                               
                                 <div class="row">
                                     <div class="col-12">
                                         <h5 class="form-title"><span>Time Table</span></h5>
@@ -80,7 +82,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="student-submit">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
                                         </div>
                                     </div>
                                 </div>

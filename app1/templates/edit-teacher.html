@@ -25,7 +25,8 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form>
+                                    <form method="POST">
+                                        {% csrf_token %}
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Basic Details</span></h5>
@@ -33,16 +34,19 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Teacher ID <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="PRE1234">
+                                                    <input name="faculty_id" id="faculty_id" type="text"
+                                                           class="form-control" value="{{ tch.faculty_id }}">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
-													<label>Name <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Vincent">
+                                                    <label> Name <span class="login-danger">*</span></label>
+                                                    <input type="text" class="form-control"
+                                                           value="{{ tch.faculty_name }}" name="faculty_name">
 												</div>
 											</div>
-											<div class="col-12 col-sm-4">
+                                            {% comment %}
+                                                <div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Gender <span class="login-danger">*</span></label>
 													<select class="form-control select">
@@ -51,62 +55,96 @@
 														<option>Others</option>
 													</select>
 												</div>
-											</div>
+                                                </div> {% endcomment %}
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms calendar-icon">
-													<label >Date Of Birth  <span class="login-danger">*</span></label>
-													<input class="form-control datetimepicker" type="text"  placeholder="29-04-2022" >
+                                                    <label>Date of Birth <span class="login-danger">*</span></label>
+                                                    <input class="form-control datetimepicker" name="date_of_birth"
+                                                           type="date" placeholder="DD-MM-YYYY"
+                                                           value="{{ tch.date_of_birth|date:'Y-m-d'}}"/>
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Mobile <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="077 3499 9959">
+                                                    <input type="text" class="form-control" value="{{ tch.phone }}"
+                                                           name="phone">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms calendar-icon">
-													<label>Joining Date <span class="login-danger">*</span></label>
-													<input class="form-control datetimepicker" type="text"  placeholder="29-04-2022" >
+                                                    <label>Join Date <span class="login-danger">*</span></label>
+                                                    <input class="form-control datetimepicker" name="join_date"
+                                                           type="date" placeholder="DD-MM-YYYY"
+                                                           value="{{ tch.join_date|date:'Y-m-d'}}"/>
 												</div>
 											</div>
-											<div class="col-12 col-sm-4">
+
+                                            <div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Qualification <span class="login-danger">*</span></label>
-													<input class="form-control" type="text" value="Bachelor of Engineering">
+                                                    <input class="form-control" type="text"
+                                                           value="{{ tch.qualification }}" name="qualification"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-4 local-forms">
+                                                <div class="form-group local-forms">
+                                                    <label> designation <span class="login-danger">*</span></label>
+                                                    <input name="designation" id="designation" type="text"
+                                                           class="form-control" placeholder="Designation"
+                                                           value="{{ tch.designation }}">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
-													<label>Experience <span class="login-danger">*</span></label>
-													<input class="form-control" type="text" value="5">
-												</div>
-											</div>
+                                                    <label> Expetise <span class="login-danger">*</span></label>
+                                                    <input class="form-control" type="text" value="{{ tch.expertise }}"
+                                                           name="expertise">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-4 local-forms">
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-5"> Department </label>
+                                                    <div class="col-md-10">
+                                                        <select name="department" class="form-control form-select">
+                                                            {% for i in depts %}
+                                                                <option value="{{ i.dept_id }}"
+                                                                        {% if i.dept_id == tch.department.dept_id %}selected{% endif %}>
+                                                                    {{ i.dept_id }} - {{ i.dept_name }}
+                                                                </option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 											<div class="col-12">
-												<h5 class="form-title"><span>Login Details</span></h5>
+                                                <h5 class="form-title"><span> Login Details</span></h5>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Username <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Vincent">
+                                                    <input type="text" class="form-control" value="{{ tch.username }}" ,
+                                                           name="username">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Email ID <span class="login-danger">*</span></label>
-													<input type="email" class="form-control" value="vincent20@gmail.com">
+                                                    <input type="email" class="form-control" value="{{ tch.email }}"
+                                                           name="email">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Password <span class="login-danger">*</span></label>
-													<input type="password" class="form-control" value="vincent">
+                                                    <input type="password" class="form-control" name="password">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Repeat Password <span class="login-danger">*</span></label>
-													<input type="password" class="form-control" value="vincent">
+                                                    <input type="password" class="form-control" name="password">
 												</div>
 											</div>
 											<div class="col-12">
@@ -115,36 +153,43 @@
 											<div class="col-12 ">
 												<div class="form-group local-forms">
 												<label>Address <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="3979 Ashwood Drive">
+                                                    <input type="text" class="form-control" value="{{ tch.address }}"
+                                                           name="address">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>City <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Omaha">
+                                                    <input type="text" class="form-control" value="{{ tch.city }}"
+                                                           name="city">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>State <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="Omaha">
+                                                    <input type="text" class="form-control" value="{{ tch.state }}"
+                                                           name="state">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Zip Code <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="3979">
+                                                    <input type="text" class="form-control" value="{{ tch.zipcode }}"
+                                                           name="zipcode">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Country <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" value="USA">
+                                                    <input type="text" class="form-control" value="{{ tch.country }}"
+                                                           name="country">
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="student-submit">
-													<button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-primary" value="submit">
+                                                        Submit
+                                                    </button>
 												</div>
 											</div>
 										</div>

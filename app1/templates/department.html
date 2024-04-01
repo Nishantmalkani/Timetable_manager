@@ -107,8 +107,10 @@
 												<th>ID</th>
 												<th>Name</th>
 												<th>HOD</th>
-                                                <th>Started Year</th>
-                                                <th>No of Students Enrolled</th>
+                                                {% comment %}
+                                                    <th>Started Year</th> {% endcomment %}
+                                                {% comment %}
+                                                    <th>No of Students Enrolled</th> {% endcomment %}
 												<th class="text-end">Action</th>
 											</tr>
 										</thead>
@@ -129,8 +131,11 @@
 													</h2>
 												</td>
                                                 <td>{{ i.hod }}</td>
-                                                <td>1995</td>
-												<td>180</td>
+                                                {% comment %}
+                                                    <td> 2000</td> {% endcomment %}
+
+                                                {% comment %}
+                                                    <td>180</td> {% endcomment %}
 												<td class="text-end">
 													<div class="actions">
                                                         <form action="{% url 'delete_department' i.dept_id %}"

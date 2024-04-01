@@ -28,18 +28,22 @@
 
 							<div class="card">
 								<div class="card-body">
+                                    <h4 class="card-title">Faculty Information</h4>
+
                                     <form method="POST">
                                         {% csrf_token %}
+
 										<div class="row">
 											<div class="col-12">
 												<h5 class="form-title"><span>Basic Details</span></h5>
 											</div>
-                                            {#                                            											<div class="col-12 col-sm-4">#}
-                                            {#                                            												<div class="form-group local-forms">#}
-                                            {#                                                                                                <label>Faculty ID <span class="login-danger">*</span></label>#}
-                                            {#                                                                                                <input name="faculty_id " id="faculty_id" type="text" class="form-control" placeholder="Teacher ID">#}
-                                            {#                                            												</div>#}
-                                            {#                                            											</div>#}
+                                            <div class="col-12 col-sm-4">
+                                                <div class="form-group local-forms">
+                                                    <label>Faculty ID <span class="login-danger">*</span></label>
+                                                    <input name="faculty_id" id="faculty_id" type="text"
+                                                           class="form-control" placeholder="Faculty ID">
+                                                </div>
+                                            </div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Name <span class="login-danger">*</span></label>
@@ -60,7 +64,7 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms calendar-icon">
 													<label >Date Of Birth  <span class="login-danger">*</span></label>
-                                                    <input name="date_of_birth" class="form-control datetimepicker"
+                                                    <input class="form-control datetimepicker" name="date_of_birth"
                                                            type="date" placeholder="DD-MM-YYYY">
 												</div>
 											</div>
@@ -74,26 +78,12 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms calendar-icon">
 													<label>Joining Date <span class="login-danger">*</span></label>
-                                                    <input name="join_date" class="form-control datetimepicker"
+                                                    <input class="form-control datetimepicker" name="join_date" 
                                                            type="date" placeholder="DD-MM-YYYY">
 												</div>
 											</div>
-											<div class="col-12 col-sm-4 local-forms">
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-md-5"> Department </label>
-                                                    <div class="col-md-10">
-                                                        <select name="department" class="form-control form-select">
 
-                                                            {% for i in dept %}
-                                                                <option value="{{ i.dept_name }}">{{ i.dept_name }}</option>
-                                                            {% endfor %}
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        <div class="col-12 col-sm-4 ">
+                                            <div class="col-12 col-sm-4 ">
                                             <div class="form-group local-forms">
                                                 <label> Qualification <span class="login-danger">*</span></label>
                                                 <input name="qualification" class="form-control" type="text"
@@ -113,7 +103,21 @@
                                                     <input name="expertise" class="form-control" type="text"
                                                            placeholder="Enter Expertise">
 												</div>
+                                        </div>
+                                            <div class="col-12 col-sm-4 local-forms">
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-4"> Department </label>
+                                                    <div class="col-md-12">
+                                                        <select name="department" class="form-control form-select">
 
+                                                            {% for i in dept %}
+                                                                <option value="{{ i.dept_name }}">{{ i.dept_name }}</option>
+                                                            {% endfor %}
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             </div>
                                         <div class="col-12 ">
 												<h5 class="form-title"><span>Login Details</span></h5>
@@ -121,7 +125,8 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Username <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter Username">
+                                                    <input type="text" class="form-control" placeholder="Enter Username"
+                                                           name="username">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
@@ -158,25 +163,29 @@
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>City <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter City">
+                                                    <input name="city" type="text" class="form-control"
+                                                           placeholder="City" name="city">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>State <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter State">
+                                                    <input type="text" class="form-control" placeholder="Enter State"
+                                                           name="state">
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Zip Code <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter Zip">
+                                                    <input type="text" class="form-control" placeholder="Enter Zip"
+                                                           name="zipcode"/>
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label>Country <span class="login-danger">*</span></label>
-													<input type="text" class="form-control" placeholder="Enter Country">
+                                                    <input type="text" class="form-control" placeholder="Enter Country"
+                                                           name="country">
 												</div>
 											</div>
 											<div class="col-12">
