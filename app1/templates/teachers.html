@@ -161,8 +161,8 @@
                                                                     <i class="feather-trash-2"></i>
                                                                 </button>
                                                             </form>
-                                                            <a href="{% url 'edit-teacher' i.faculty_id %}"
-                                                               class="btn btn-sm bg-danger-light">
+                                                            <a class="btn btn-sm bg-danger-light"
+                                                               href="{% url 'edit-teacher' i.faculty_id %}">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
@@ -171,15 +171,27 @@
                                             {% endfor %}
 											</tbody>
 										</table>
-                                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                             aria-live="polite">Showing {{ fac.start_index }} to {{ fac.end_index }}
-                                            of {{ fac.count }} entries
-                                        </div>
-                                        <a href="#" class="previous">&laquo; Previous</a>
-                                        <a href="#" class="next">Next &raquo;</a>
+                                        {% for faculty in faculty %}
+                                            <!-- Display faculty details -->
+                                        {% endfor %}
 
-                                        <a href="#" class="previous round">&#8249;</a>
-                                        <a href="#" class="next round">&#8250;</a>
+                                        <div class="pagination">
+										<span class="step-links">
+											{% if faculty.has_previous %}
+                                                <a href="?page=1">&laquo; first</a>
+                                                <a href="?page={{ faculty.previous_page_number }}">previous</a>
+                                            {% endif %}
+
+                                            <span class="current">
+												Page {{ faculty.number }} of {{ faculty.paginator.num_pages }}.
+											</span>
+
+                                            {% if faculty.has_next %}
+                                                <a href="?page={{ faculty.next_page_number }}">next</a>
+                                                <a href="?page={{ faculty.paginator.num_pages }}">last &raquo;</a>
+                                            {% endif %}
+										</span>
+                                        </div>
 								</div>
 							</div>
 						</div>

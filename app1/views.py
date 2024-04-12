@@ -1,32 +1,36 @@
 from datetime import datetime
 
-from django.contrib import messages
-from django.contrib.auth import authenticate, login as auth_login
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import *
 
 from .models import *
 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def demo1(request):
-    return render(request, 'index.html')
+    if 'user_login' in request.session:
+        return render(request, 'index.html')
+    else:
+        return redirect('login')
 
 
 def adddepartment(request):
-    if request.method == 'POST':
-        dept_id = request.POST['dept_id']
-        dept_name = request.POST['dept_name']
-        hod = request.POST['hod']
+    if 'user_login' in request.session:
+        if request.method == 'POST':
+            dept_id = request.POST['dept_id']
+            dept_name = request.POST['dept_name']
+            hod = request.POST['hod']
 
-        if departments.objects.filter(dept_id=dept_id).exists():
-            raise ValueError(f"A department with dept_id {dept_id} already exists.")
-        else:
-            department = departments(dept_id=dept_id, dept_name=dept_name, hod=hod)
-            department.save()
-            return redirect('/department/')   
+            if departments.objects.filter(dept_id=dept_id).exists():
+                raise ValueError(f"A department with dept_id {dept_id} already exists.")
+            else:
+                department = departments(dept_id=dept_id, dept_name=dept_name, hod=hod)
+                department.save()
+                return redirect('/department/')
 
-    return render(request, 'add-department.html')
+        return render(request, 'add-department.html')
+    else:
+        return redirect('login')
 
 
 def addsubject(request):
@@ -189,28 +193,33 @@ def timetable(request):
 # @login_required(login_url='dashboard')
 def login(request):
     if request.method == 'POST':
-        login_form = AuthenticationForm(request, data=request.POST)
-        if login_form.is_valid():
-            username = login_form.cleaned_data.get('username')
-            password = login_form.cleaned_data.get('password')
-            authenticated_user = authenticate(request, username=username, password=password)
-            if authenticated_user is not None:
-                if Facultydetail.objects.filter(user=authenticated_user).exists():
-                    auth_login(request, authenticated_user)
-                    messages.success(request, "You have successfully logged in")
-                    return redirect('dashboard')
-                else:
-                    messages.error(request, "Faculty detail does not exist")
-            else:
-                messages.error(request, "Invalid username or password")
-        else:
-            messages.error(request, "Username and password are required")
+        email = request.POST['email']
+        password = request.POST['password']
+        try:
+            user_info = Facultydetail.objects.get(email=email)
+            if user_info.password == password:
+                request.session['user_login'] = email
+                user = request.session['user_login']
+                return redirect('dashboard')
+        except:
+            return render(request, 'login')
     else:
-        login_form = AuthenticationForm()
-        if not login_form:
-            messages.error(request, "The page is blank")
-    return render(request, 'login.html', {'login_form': login_form})
 
+        return render(request, 'login.html')
+
+
+def _is_faculty_user(user):
+    try:
+        Facultydetail.objects.get(user=user)
+        return True
+    except Facultydetail.DoesNotExist:
+        return False
+
+
+def logout(request):
+    if 'user_login' in request.session:
+        del request.session['user_login']
+    return redirect('login')
 
 def profile(request):
     return render(request, 'profile.html')

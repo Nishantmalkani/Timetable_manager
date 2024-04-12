@@ -42,10 +42,10 @@
 
 				<!-- Logo -->
                 <div class="header-left">
-                    <a href="{% url 'index' %}" class="logo">
+                    <a href="{% url 'dashboard' %}" class="logo">
                         <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
 					</a>
-                    <a href="{% url 'index' %}" class="logo logo-small">
+                    <a href="{% url 'dashboard' %}" class="logo logo-small">
                         <img src="{% static 'assets/img/logo.png' %}" alt="Logo" width="30" height="30">
 					</a>
                 </div>
@@ -105,7 +105,7 @@
 							</div>
                             <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
 
-                            <a class="dropdown-item" href="{% url 'login' %}">Logout</a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
 						</div>
 					</li>
 					<!-- /User Menu -->
@@ -125,7 +125,8 @@
 								<span>Main Menu</span>
 							</li>
                             <li>
-								<a href="{% url 'index' %}"><i class="feather-grid"></i> <span> Dashboard</span> </a>
+                                <a href="{% url 'dashboard' %}"><i class="feather-grid"></i> <span> Dashboard</span>
+                                </a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span class="menu-arrow"></span></a>
