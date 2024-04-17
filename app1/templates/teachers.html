@@ -3,34 +3,34 @@
 
 {% block body %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        a {
-            text-decoration: none;
-            display: inline-block;
-            padding: 8px 16px;
-        }
-
-        a:hover {
-            background-color: #ddd;
-            color: blue;
-        }
-
-        .previous {
-            background-color: ;
-            color: black;
-        }
-
-        .next {
-            background-color: ;
-            color: black;
-        }
-
-        .round {
-            border-radius: 50%;
-        }
-
-    </style>
+    {#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+    {#    <style>#}
+    {#        a {#}
+    {#            text-decoration: none;#}
+    {#            display: inline-block;#}
+    {#            padding: 8px 16px;#}
+    {#        }#}
+    {##}
+    {#        a:hover {#}
+    {#            background-color: #ddd;#}
+    {#            color: blue;#}
+    {#        }#}
+    {##}
+    {#        .previous {#}
+    {#            background-color: ;#}
+    {#            color: black;#}
+    {#        }#}
+    {##}
+    {#        .next {#}
+    {#            background-color: ;#}
+    {#            color: black;#}
+    {#        }#}
+    {##}
+    {#        .round {#}
+    {#            border-radius: 50%;#}
+    {#        }#}
+    {##}
+    {#    </style>#}
 
 
 	
@@ -175,22 +175,26 @@
                                             <!-- Display faculty details -->
                                         {% endfor %}
 
-                                        <div class="pagination">
-										<span class="step-links">
-											{% if faculty.has_previous %}
-                                                <a href="?page=1">&laquo; first</a>
-                                                <a href="?page={{ faculty.previous_page_number }}">previous</a>
-                                            {% endif %}
+                                        <div class="card bg-white">
+                                            <div class="card-body">
 
-                                            <span class="current">
-												Page {{ faculty.number }} of {{ faculty.paginator.num_pages }}.
-											</span>
-
-                                            {% if faculty.has_next %}
-                                                <a href="?page={{ faculty.next_page_number }}">next</a>
-                                                <a href="?page={{ faculty.paginator.num_pages }}">last &raquo;</a>
-                                            {% endif %}
-										</span>
+                                                <div>
+                                                    <ul class="pagination pagination-sm mb-0">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">2 <span
+                                                                    class="sr-only"></span></a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
 								</div>
 							</div>

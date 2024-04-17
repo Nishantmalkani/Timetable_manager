@@ -107,7 +107,7 @@
                                                     <label class="col-form-label col-md-5"> Department </label>
                                                     <div class="col-md-10">
                                                         <select name="department" class="form-control form-select">
-                                                            {% for i in depts %}
+                                                            {% for i in deps1 %}
                                                                 <option value="{{ i.dept_id }}"
                                                                         {% if i.dept_id == tch.department.dept_id %}selected{% endif %}>
                                                                     {{ i.dept_id }} - {{ i.dept_name }}

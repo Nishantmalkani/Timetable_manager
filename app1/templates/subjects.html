@@ -128,22 +128,22 @@
                                                     <td>{{ i.semester }}</td>
 													<td class="text-end">
 														<div class="actions">
-
                                                             <form action="{% url 'delete_subjects' i.subject_code %}"
                                                                   method="POST">
                                                                 {% csrf_token %}
-                                                                <button type="submit" value="Delete"
+                                                                <button type="submit"
                                                                         class="btn btn-sm bg-danger-light">
                                                                     <i class="feather-trash-2"></i>
                                                                 </button>
                                                             </form>
-
-                                                            <a href="{% url 'editsubject' i.subject_code %}"
-                                                               class="btn btn-sm bg-success-light">
+                                                            <a href="{% url 'delete_subjects' i.subject_code %}"
+                                                               data-bs-
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>
 													</td>
+                                                </tr>
 												</tr>
                                             {% endfor %}
 											</tbody>

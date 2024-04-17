@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment=".">
+    <list default="true" id="32f1264e-9c9d-4e21-ae9b-381081155e26" name="Changes" comment="&#10;Login Operation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable_manager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable_manager/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/add-subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/add-subject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/add-teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/add-teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/add-time-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/add-time-table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/edit-subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/edit-subject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/edit-teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/edit-teacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/subjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/templates/teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app1/templates/teachers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -91,7 +98,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -299,6 +306,12 @@
       <workItem from="1711910009529" duration="377000" />
       <workItem from="1711990029809" duration="60000" />
       <workItem from="1712691505027" duration="190000" />
+      <workItem from="1712949268851" duration="960000" />
+      <workItem from="1713008809570" duration="1376000" />
+      <workItem from="1713169539676" duration="46000" />
+      <workItem from="1713210760588" duration="823000" />
+      <workItem from="1713297066340" duration="455000" />
+      <workItem from="1713297528167" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="updated index page">
       <option name="closed" value="true" />
@@ -636,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711990064121</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="&#10;Login Operation">
+      <option name="closed" value="true" />
+      <created>1712949391946</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1712949391946</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +685,8 @@
     <MESSAGE value="CRUD operations" />
     <MESSAGE value="CRUD Operations" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="&#10;Login Operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Login Operation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

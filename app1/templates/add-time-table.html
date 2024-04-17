@@ -28,37 +28,58 @@
                                     <div class="col-12">
                                         <h5 class="form-title"><span>Time Table</span></h5>
                                     </div>
-                                    <div class="col-12 col-sm-4">
+                                    {% comment %}
+                                        <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
                                             <label>Faculty Id <span class="login-danger">*</span></label>
                                             <input type="text" class="form-control">
                                         </div>
-                                    </div>
+                                        </div> {% endcomment %}
                                     <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
-                                            <label>Name <span class="login-danger">*</span></label>
-                                            <input type="text" class="form-control">
+                                            <label> Branch <span class="login-danger">*</span></label>
+                                            <select name="department" class="form-control form-select">
+
+                                                {% for i in dept1 %}
+                                                    <option value="{{ i.dept_name }}">{{ i.dept_name }}</option>
+                                                {% endfor %}
+
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-4">
-                                        <div class="form-group local-forms">
-                                            <label>Class <span class="login-danger">*</span></label>
-                                            <input type="text" class="form-control">
-                                        </div>
+                                </div>
                                     </div>
                                     <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
                                             <label>Semester <span class="login-danger">*</span></label>
-                                            <input type="text" class="form-control">
+                                            <select class="form-control select">
+                                                <option>Please Select Class</option>
+                                                {#														<option>12</option>#}
+                                                {#														<option>11</option>#}
+                                                {#														<option>10</option>#}
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-4">
+                        <div class="col-12 col-sm-4">
+                            <div class="form-group local-forms">
+                                <label> Class <span class="login-danger">*</span></label>
+                                <select class="form-control select">
+                                    <option>Please Select Section</option>
+                                    {#														<option>B</option>#}
+                                    {#														<option>A</option>#}
+                                    {#														<option>C</option>#}
+                                </select>
+                            </div>
+                        </div>
+                        {% comment %}
+                            <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms">
                                             <label>Subject <span class="login-danger">*</span></label>
                                             <input type="text" class="form-control">
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-sm-4">
+                            </div> {% endcomment %}
+                        {% comment %}
+                            <div class="col-12 col-sm-4">
                                         <div class="form-group local-forms calendar-icon">
                                             <label>Day <span class="login-danger">*</span></label>
                                             <input class="form-control datetimepicker" type="date"
@@ -77,7 +98,7 @@
                                             <input type="time" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                            <div class="col-12"> {% endcomment %}
                                         <div class="student-submit">
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>

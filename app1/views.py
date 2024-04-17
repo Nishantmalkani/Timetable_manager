@@ -139,6 +139,7 @@ def editsubject(request, subject_code):
 def editteacher(request, faculty_id):
     tch = Facultydetail.objects.get(faculty_id=faculty_id)
     deps = departments.objects.get(dept_id=tch.department.dept_id)
+    deps1 = departments.objects.all()
     if request.method == "POST":
         tch.faculty_id = request.POST['faculty_id']
         tch.faculty_name = request.POST['faculty_name']
@@ -148,8 +149,9 @@ def editteacher(request, faculty_id):
         tch.date_of_birth = date_of_birth
 
         department_name = request.POST.get('department')
-        if department_name == deps.dept_name:
-            tch.department = deps
+        for i in deps1:
+            if department == i.dept_name:
+                d = departments.objects.get(pk=i.id)
 
         tch.designation = request.POST['designation']
         tch.expertise = request.POST['expertise']
@@ -208,12 +210,12 @@ def login(request):
         return render(request, 'login.html')
 
 
-def _is_faculty_user(user):
-    try:
-        Facultydetail.objects.get(user=user)
-        return True
-    except Facultydetail.DoesNotExist:
-        return False
+# def _is_faculty_user(user):
+#     try:
+#         Facultydetail.objects.get(user=user)
+#         return True
+#     except Facultydetail.DoesNotExist:
+#         return False
 
 
 def logout(request):
@@ -233,12 +235,17 @@ def forget_password(request):
     return render(request, 'forgot-password.html')
 
 
-def register(request):
-    return render(request, 'register.html')
+# def register(request):
+#     return render(request, 'register.html')
 
 
 def add_timetable(request):
-    return render(request, 'add-time-table.html')
+    dept1 = departments.objects.all()
+    for i in dept1:
+        if department == i.dept_name:
+            d1 = departments.objects.get(pk=i.id)
+
+    return render(request, 'add-time-table.html', {'dept1': dept1})
 
 
 def delete_data(request, faculty_id):
@@ -258,7 +265,8 @@ def delete_department(request, dept_id):
 
 
 def delete_subjects(request, subject_code):
-    subject = get_object_or_404(subjects, subject_code=subject_code)
+    pi2 = get_object_or_404(subjects, subject_code=subject_code)
     if request.method == 'POST':
-        subject.delete()
+        pi2.delete()
     return redirect('/subject/')  # Remove unnecessary arguments
+
