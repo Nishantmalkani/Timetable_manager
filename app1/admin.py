@@ -24,3 +24,8 @@ class FacultydetailAdmin(admin.ModelAdmin):
 @admin.register(subjects)
 class subjectAdmin(admin.ModelAdmin):
     list_display = ('subject_code', 'subject_name', 'semester')
+
+
+@admin.register(timetable)
+class TimeTableAdmin(admin.ModelAdmin):
+    list_display = ('semester', 'division')

@@ -50,3 +50,8 @@ class subjects(models.Model):
 
 class vanue(models.Model):
     vanue_name = models.CharField(max_length=500)
+
+
+class timetable(models.Model):
+    semester = models.IntegerField()
+    division = models.CharField(max_length=500)
