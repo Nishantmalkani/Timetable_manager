@@ -158,10 +158,17 @@
                                         <li><a href="{% url 'editsubject' %}">Subject Edit</a></li> {% endcomment %}
 								</ul>
 							</li>
-							
-							
-							<li>
-								<a href="{% url 'timetable' %}"><i class="fas fa-table"></i> <span>Time Table</span></a>
+
+
+                            <li class="submenu">
+                                {% comment %} <a href="{% url 'timetable' %}"><i class="fas fa-table"></i> <span>Time Table</span></a> {% endcomment %}
+                                <a href="#"><i class="fas fa-book-reader"></i> <span> Time Table</span> <span
+                                        class="menu-arrow"></span></a>
+                                <ul>
+                                    <li><a href="{% url 'timetable' %}">Time Table List</a></li>
+                                    <li><a href="{% url 'add-time-table' %}">Time Table Add</a></li>
+                                    <li><a href="{% url 'edit-time-tabel' %}">Time Table Edit</a></li>
+                                </ul>
 							</li>
 							
 							<li class="submenu">

@@ -47,25 +47,28 @@
 					</div>
 					<!-- /Page Header -->
 
-					<div class="student-group-form">
-						<div class="row">
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by ID ...">
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by Name ...">
-								</div>
-							</div>
-
-							<div class="col-lg-2">
-								<div class="search-student-btn">
-									<button type="btn" class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
+                    <div class="department-group-form">
+                        <form method="get">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_id" value="{{ request.GET.search_id }}"
+                                               class="form-control" placeholder="Search by ID ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_name" value="{{ request.GET.search_name }}"
+                                               class="form-control" placeholder="Search by Name ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="search-department-btn">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
 					</div>
 
 					<div class="row">
@@ -81,30 +84,40 @@
 												<h3 class="page-title">Departments</h3>
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
-												<a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
+                                                <a href="{% url 'download_department_details' %}"
+                                                   class="btn btn-outline-primary me-2"><i class="fas fa-download"></i>
+                                                    Download</a>
                                                 <a href="{% url 'add-department' %}" class="btn btn-primary"><i
                                                         class="fas fa-plus"></i></a>
 											</div>
 										</div>
 									</div>
 									<!-- /Page Header -->
-                                    <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
-                                        <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
-                                                class="">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                        </select> entries</label></div>
+                                    <div class="table-responsive">
+                                        <form method="get">
+                                            <label>Show
+                                                <select name="entries" onchange="this.form.submit()">
+                                                    <option value="10"
+                                                            {% if request.GET.entries == "10" %}selected{% endif %}>10
+                                                    </option>
+                                                    <option value="25"
+                                                            {% if request.GET.entries == "25" %}selected{% endif %}>25
+                                                    </option>
+                                                    <option value="50"
+                                                            {% if request.GET.entries == "50" %}selected{% endif %}>50
+                                                    </option>
+                                                    <option value="100"
+                                                            {% if request.GET.entries == "100" %}selected{% endif %}>100
+                                                    </option>
+                                                </select> entries
+                                            </label>
+                                        </form>
+                                    </div>
 									<table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
 										<thead class="student-thread">
 											<tr>
-												<th>
-													<div class="form-check check-tables">
-														<input class="form-check-input" type="checkbox"  value="something">
-													</div>
-												</th>
-												<th>ID</th>
+
+                                            <th>ID</th>
 												<th>Name</th>
 												<th>HOD</th>
                                                 {% comment %}
@@ -119,12 +132,8 @@
                                         {% for i in dep %}
 
                                             <tr>
-												<td>
-													<div class="form-check check-tables">
-														<input class="form-check-input" type="checkbox"  value="something">
-													</div>
-												</td>
-                                                <td>{{ i.dept_id }}</td>
+
+                                            <td>{{ i.dept_id }}</td>
 												<td>
 													<h2>
                                                         <a>{{ i.dept_name }}</a>
@@ -156,15 +165,24 @@
 
 										</tbody>
 									</table>
-                                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                         aria-live="polite">Showing {{ dep.count }}
+                                    <div class="entries-info">
+                                        Total number of entries: {{ dep1.paginator.count }}
                                     </div>
-                                    <a href="#" class="previous">&laquo; Previous</a>
-                                    <a href="#" class="next">Next &raquo;</a>
+                                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                         aria-live="polite">Page {{ dep1.number }} of {{ dep1.paginator.num_pages }}
+                                    </div>
+                                    <div>
+                                        {% if dep1.has_previous %}
+                                            <a href="?page={{ dep1.previous_page_number }}" class="previous round">&#8249;
+                                                Previous</a>
 
-                                    <a href="#" class="previous round">&#8249;</a>
-                                    <a href="#" class="next round">&#8250;</a>
-								</div>
+                                        {% endif %}
+                                        {% if dep1.has_next %}
+                                            <a href="?page={{ dep1.next_page_number }}" class="next round">&#8250;
+                                                Next</a>
+
+                                        {% endif %}
+                                    </div>
 							</div>
 						</div>
 					</div>

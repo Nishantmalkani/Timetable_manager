@@ -39,7 +39,7 @@
                                         <div class="form-group local-forms">
                                             <label> Branch <span class="login-danger">*</span></label>
                                             <select name="department" class="form-control form-select">
-
+                                                <option>Please Select Branch</option>
                                                 {% for i in dept1 %}
                                                     <option value="{{ i.dept_name }}">{{ i.dept_name }}</option>
                                                 {% endfor %}
@@ -51,10 +51,10 @@
 
                                     <div class="col-2 col-sm-4">
                                         <div class="form-group local-forms">
-                                            <label>Semester <span class="login-danger">*</span></label>
-                                            <select class="form-control select">
-                                                <option>Please Select Class</option>
-                                                {#														<option>12</option>#}
+                                            <label> Semester <span class="login-danger">*</span></label>
+                                            <select name="Semester" class="form-control form-select">
+                                                <option>Please Select Semester</option>
+                                                <option>12</option>
                                                 {#														<option>11</option>#}
                                                 {#														<option>10</option>#}
                                             </select>
@@ -62,43 +62,667 @@
                                     </div>
                                     <div class="col-2 col-sm-4">
                             <div class="form-group local-forms">
-                                <label> Class <span class="login-danger">*</span></label>
-                                <select class="form-control select">
+                                <label> class <span class="login-danger">*</span></label>
+                                <select name="Section" class="form-control form-select">
                                     <option>Please Select Section</option>
-                                    {#														<option>B</option>#}
+                                    <option>B</option>
+                                    #}
                                     {#														<option>A</option>#}
                                     {#														<option>C</option>#}
                                 </select>
                             </div>
                         </div>
-                        {% comment %}
-                            <div class="col-12 col-sm-4">
-                                        <div class="form-group local-forms">
-                                            <label>Subject <span class="login-danger">*</span></label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                            </div> {% endcomment %}
-                        {% comment %}
-                            <div class="col-12 col-sm-4">
-                                        <div class="form-group local-forms calendar-icon">
-                                            <label>Day <span class="login-danger">*</span></label>
-                                            <input class="form-control datetimepicker" type="date"
-                                                   placeholder="DD-MM-YYYY">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-4">
-                                        <div class="form-group local-forms">
-                                            <label>Start Time <span class="login-danger">*</span></label>
-                                            <input type="time" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-4">
-                                        <div class="form-group local-forms">
-                                            <label>End Time <span class="login-danger">*</span></label>
-                                            <input type="time" class="form-control">
-                                        </div>
-                                    </div>
-                            <div class="col-12"> {% endcomment %}
+
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Timing</th>
+                                            <th scope="col">Monday</th>
+                                            <th scope="col">Tuesday</th>
+                                            <th scope="col">Wednesday</th>
+                                            <th scope="col">Thursday</th>
+                                            <th scope="col">Friday</th>
+                                            <th scope="col">Saturday</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">8:00-8:30</th>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <select name="subjects"
+                                                                        class="form-control form-select">
+                                                                    <option>Please Select Subject</option>
+                                                                    {% for i in subs %}
+                                                                        <option value="{{ i.subject_name }}">{{ i.subject_name }}</option>
+                                                                    {% endfor %}
+                                                                </select>
+
+                                                                <select name="Faculty" class="form-control form-select">
+                                                                    <option>Please Select Faculty</option>
+                                                                    {% for i in facs %}
+                                                                        <option value="{{ i.faculty_name }}">{{ i.faculty_name }}</option>
+                                                                    {% endfor %}
+                                                                </select>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" type="submit"
+                                                                        class="btn btn-primary">save
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8:30-9:00</th>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9:00-9:30</th>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                    ADD
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                                     data-bs-keyboard="false" tabindex="-1"
+                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Select
+                                                                    Subject</h5>
+                                                                <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Understood
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                         <div class="student-submit">
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>

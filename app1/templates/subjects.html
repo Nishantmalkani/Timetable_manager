@@ -46,24 +46,27 @@
 					<!-- /Page Header -->
 
 					<div class="student-group-form">
-						<div class="row">
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by ID ...">
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by Name ...">
-								</div>
-							</div>
-
-                            <div class="col-lg-2">
-								<div class="search-student-btn">
-									<button type="btn" class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
+                        <form method="get">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_code" value="{{ request.GET.search_code }}"
+                                               class="form-control" placeholder="Search by Code ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_name" value="{{ request.GET.search_name }}"
+                                               class="form-control" placeholder="Search by Name ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="search-student-btn">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
 					</div>
 
 					<div class="row">
@@ -79,7 +82,9 @@
 												<h3 class="page-title">Subjects</h3>
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
-												<a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
+                                                <a href="{% url 'download_subjects_details' %}"
+                                                   class="btn btn-outline-primary me-2"><i class="fas fa-download"></i>
+                                                    Download</a>
                                                 <a href="{% url 'add-subject' %}" class="btn btn-primary"><i
                                                         class="fas fa-plus"></i></a>
 											</div>
@@ -88,37 +93,40 @@
 									<!-- /Page Header -->
 
 									<div class="table-responsive">
-                                        <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
-                                            <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
-                                                    class="">
-                                                <option value="10">10</option>
-                                                <option value="25">25</option>
-                                                <option value="50">50</option>
-                                                <option value="100">100</option>
-                                            </select> entries</label></div>
-
+                                        <form method="get">
+                                            <label>Show
+                                                <select name="entries" onchange="this.form.submit()">
+                                                    <option value="10"
+                                                            {% if request.GET.entries == "10" %}selected{% endif %}>10
+                                                    </option>
+                                                    <option value="25"
+                                                            {% if request.GET.entries == "25" %}selected{% endif %}>25
+                                                    </option>
+                                                    <option value="50"
+                                                            {% if request.GET.entries == "50" %}selected{% endif %}>50
+                                                    </option>
+                                                    <option value="100"
+                                                            {% if request.GET.entries == "100" %}selected{% endif %}>100
+                                                    </option>
+                                                </select> entries
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="table-responsive">
                                         <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
 											<thead class="student-thread">
 												<tr>
-													<th>
-														<div class="form-check check-tables">
-															<input class="form-check-input" type="checkbox"  value="something">
-														</div>
-													</th>
-                                                    <th>Subject Code</th>
+
+                                                <th>Subject Code</th>
 													<th>Name</th>
                                                     <th>Semester</th>
 													<th class="text-end">Action</th>
 												</tr>
 											</thead>
 											<tbody>
-                                            {% for i in sub %}
+                                            {% for i in sub1 %}
 												<tr>
-													<td>
-														<div class="form-check check-tables">
-															<input class="form-check-input" type="checkbox"  value="something">
-														</div>
-													</td>
+
                                                     <td>{{ i.subject_code }}</td>
 													<td>
 														<h2>
@@ -136,7 +144,7 @@
                                                                     <i class="feather-trash-2"></i>
                                                                 </button>
                                                             </form>
-                                                            <a href="{% url 'delete_subjects' i.subject_code %}"
+                                                            <a href="{% url 'editsubject' i.subject_code %}"
                                                                data-bs-
                                                                class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
@@ -148,15 +156,24 @@
                                             {% endfor %}
 											</tbody>
 										</table>
+                                        <div class="entries-info">
+                                            Total number of entries: {{ sub1.paginator.count }}
+                                        </div>
                                         <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                             aria-live="polite">Showing {{ sub.count }} entries
+                                             aria-live="polite">Page {{ sub1.number }} of {{ sub1.paginator.num_pages }}
                                         </div>
-                                        </div>
-                                    <a href="#" class="previous">&laquo; Previous</a>
-                                        <a href="#" class="next">Next &raquo;</a>
+                                        <div>
+                                            {% if sub1.has_previous %}
+                                                <a href="?page={{ sub1.previous_page_number }}" class="previous round">&#8249;
+                                                    Previous</a>
 
-                                        <a href="#" class="previous round">&#8249;</a>
-                                        <a href="#" class="next round">&#8250;</a>
+                                            {% endif %}
+                                            {% if sub1.has_next %}
+                                                <a href="?page={{ sub1.next_page_number }}" class="next round">&#8250;
+                                                    Next</a>
+
+                                            {% endif %}
+                                        </div>
                                     </div>
 								</div>
 							</div>

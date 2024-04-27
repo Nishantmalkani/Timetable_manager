@@ -3,34 +3,34 @@
 
 {% block body %}
 
-    {#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
-    {#    <style>#}
-    {#        a {#}
-    {#            text-decoration: none;#}
-    {#            display: inline-block;#}
-    {#            padding: 8px 16px;#}
-    {#        }#}
-    {##}
-    {#        a:hover {#}
-    {#            background-color: #ddd;#}
-    {#            color: blue;#}
-    {#        }#}
-    {##}
-    {#        .previous {#}
-    {#            background-color: ;#}
-    {#            color: black;#}
-    {#        }#}
-    {##}
-    {#        .next {#}
-    {#            background-color: ;#}
-    {#            color: black;#}
-    {#        }#}
-    {##}
-    {#        .round {#}
-    {#            border-radius: 50%;#}
-    {#        }#}
-    {##}
-    {#    </style>#}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+        }
+
+        a:hover {
+            background-color: #ddd;
+            color: blue;
+        }
+
+        .previous {
+            background-color: ;
+            color: black;
+        }
+
+        .next {
+            background-color: ;
+            color: black;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+    </style>
 
 
 	
@@ -49,26 +49,29 @@
 					</div>
 					<!-- /Page Header -->
 
-					<div class="student-group-form">
-						<div class="row">
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by ID ...">
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search by Name ...">
-								</div>
-							</div>
-
-                            <div class="col-lg-2">
-								<div class="search-student-btn">
-									<button type="btn" class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <div class="faculty-group-form">
+                        <form method="get">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_id" value="{{ request.GET.search_id }}"
+                                               class="form-control" placeholder="Search by ID ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="search_name" value="{{ request.GET.search_name }}"
+                                               class="form-control" placeholder="Search by Name ...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="search-faculty-btn">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
 					<div class="row">
 						<div class="col-sm-12">
@@ -86,7 +89,8 @@
                                                 <a href="{% url 'teacher' %}"
                                                    class="btn btn-outline-gray me-2 active"><i class="feather-list"></i></a>
 
-                                                <a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
+                                                <a href="{% url 'download-faculty-details' %}"" class="btn
+                                                btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
                                                 <a href="{% url 'add-teacher' %}" class="btn btn-primary"><i
                                                         class="fas fa-plus"></i></a>
 											</div>
@@ -96,26 +100,38 @@
 
 									<div class="table-responsive">
 										<table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
-                                            <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
-                                                <select name="DataTables_Table_0_length"
-                                                        aria-controls="DataTables_Table_0" class="">
-                                                    <option value="10">10</option>
-                                                    <option value="25">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="100">100</option>
-                                                </select> entries</label>
+                                            <div class="table-responsive">
+                                                <form method="get">
+                                                    <label>Show
+                                                        <select name="entries" onchange="this.form.submit()">
+                                                            <option value="10"
+                                                                    {% if request.GET.entries == "10" %}selected{% endif %}>
+                                                                10
+                                                            </option>
+                                                            <option value="25"
+                                                                    {% if request.GET.entries == "25" %}selected{% endif %}>
+                                                                25
+                                                            </option>
+                                                            <option value="50"
+                                                                    {% if request.GET.entries == "50" %}selected{% endif %}>
+                                                                50
+                                                            </option>
+                                                            <option value="100"
+                                                                    {% if request.GET.entries == "100" %}selected{% endif %}>
+                                                                100
+                                                            </option>
+                                                        </select> entries
+                                                    </label>
+                                                </form>
                                             </div>
-											<thead class="student-thread">
+
+                                            <thead class="student-thread">
 												<tr>
-													<th>
-														<div class="form-check check-tables">
-															<input class="form-check-input" type="checkbox"  value="something">
-														</div>
-													</th>
-													<th>ID</th>
+
+                                                    <th>ID</th>
 													<th>Name</th>
                                                     <th>Date Of Birth</th>
-													<th>Gender</th>
+                                                    {% comment %} <th>Gender</th> {% endcomment %}
                                                     <th>Designation</th>
                                                     <th>Qualification</th>
 													<th>Mobile Number</th>
@@ -126,13 +142,9 @@
 												</tr>
 											</thead>
 											<tbody>
-                                            {% for i in fac %}
+                                            {% for i in fac1 %}
 												<tr>
-													<td>
-														<div class="form-check check-tables">
-															<input class="form-check-input" type="checkbox"  value="something">
-														</div>
-													</td>
+
                                                     <td>
                                                         {{ i.faculty_id }}
                                                     </td>
@@ -143,7 +155,7 @@
 														</h2>
 													</td>
                                                     <td>{{ i.date_of_birth }}</td>
-													<td>Female</td>
+                                                    {% comment %} <td>Female</td> {% endcomment %}
                                                     <td>{{ i.designation }}</td>
                                                     <td>{{ i.qualification }}</td>
                                                     <td>{{ i.phone }}</td>
@@ -171,30 +183,25 @@
                                             {% endfor %}
 											</tbody>
 										</table>
-                                        {% for faculty in faculty %}
-                                            <!-- Display faculty details -->
-                                        {% endfor %}
 
-                                        <div class="card bg-white">
-                                            <div class="card-body">
 
-                                                <div>
-                                                    <ul class="pagination pagination-sm mb-0">
-                                                        <li class="page-item disabled">
-                                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                                        </li>
-                                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                        <li class="page-item active">
-                                                            <a class="page-link" href="#">2 <span
-                                                                    class="sr-only"></span></a>
-                                                        </li>
-                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                        <li class="page-item">
-                                                            <a class="page-link" href="#">Next</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <div class="entries-info">
+                                            Total number of entries: {{ fac1.paginator.count }}
+                                        </div>
+                                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                             aria-live="polite">Page {{ fac1.number }} of {{ fac1.paginator.num_pages }}
+                                        </div>
+                                        <div>
+                                            {% if fac1.has_previous %}
+                                                <a href="?page={{ fac1.previous_page_number }}" class="previous round">&#8249;
+                                                    Previous</a>
+
+                                            {% endif %}
+                                            {% if fac1.has_next %}
+                                                <a href="?page={{ sub1.next_page_number }}" class="next round">&#8250;
+                                                    Next</a>
+
+                                            {% endif %}
                                         </div>
 								</div>
 							</div>

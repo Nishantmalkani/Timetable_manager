@@ -1,6 +1,10 @@
+import csv
 from datetime import datetime
 
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.db.models import Q
+from django.http import HttpResponse
 from django.shortcuts import *
 
 from .models import *
@@ -110,7 +114,22 @@ def addteacher(request):
 
 def department(request):
     dep = departments.objects.all()
-    return render(request, 'department.html', {'dep': dep})
+
+    search_id = request.GET.get('search_id', '')
+    search_name = request.GET.get('search_name', '')
+
+    if search_id or search_name:
+        dep = departments.objects.filter(Q(dept_id__iexact=search_id) & Q(dept_name__icontains=search_name))
+    else:
+        dep = departments.objects.all()
+
+    entries_per_page = request.GET.get('entries', 10)  # Default to 10 entries per page
+    paginator = Paginator(dep, entries_per_page)
+
+    page_number = request.GET.get('page')
+    dep1 = paginator.get_page(page_number)
+
+    return render(request, 'department.html', {'dep': dep, 'dep1': dep1})
 
 
 def editdepartment(request, dept_id):
@@ -176,7 +195,20 @@ def editteacher(request, faculty_id):
 
 def subject(request):
     sub = subjects.objects.all()
-    return render(request, 'subjects.html', {'sub': sub})
+    search_code = request.GET.get('search_code', '')
+    search_name = request.GET.get('search_name', '')
+    sub = subjects.objects.filter(Q(subject_code__icontains=search_code) & Q(subject_name__icontains=search_name))
+    # pagination
+    # p = Paginator(subjects.objects, 10)
+    # page = request.GET.get('page')
+    # sub1 = p.get_page(page)
+    entries_per_page = request.GET.get('entries', 10)  # Default to 10 entries per page
+    paginator = Paginator(sub, entries_per_page)
+
+    page_number = request.GET.get('page')
+    sub1 = paginator.get_page(page_number)
+
+    return render(request, 'subjects.html', {'sub': sub, 'sub1': sub1})
 
 
 def teacherdetails(request):
@@ -185,7 +217,17 @@ def teacherdetails(request):
 
 def teacher(request):
     fac = Facultydetail.objects.all()
-    return render(request, 'teachers.html', {'fac': fac})
+    search_id = request.GET.get('search_id', '')
+    search_name = request.GET.get('search_name', '')
+    sort_by = request.GET.get('sort_by', 'faculty_id')  # Default to sorting by faculty_id
+
+    fac = Facultydetail.objects.filter(Q(faculty_id__icontains=search_id) & Q(faculty_name__icontains=search_name))
+    entries_per_page = request.GET.get('entries', 10)  # Default to 10 entries per page
+    paginator = Paginator(fac, entries_per_page)
+
+    page_number = request.GET.get('page')
+    fac1 = paginator.get_page(page_number)
+    return render(request, 'teachers.html', {'fac': fac, 'fac1': fac1})
 
 
 def timetable(request):
@@ -208,15 +250,6 @@ def login(request):
     else:
 
         return render(request, 'login.html')
-
-
-# def _is_faculty_user(user):
-#     try:
-#         Facultydetail.objects.get(user=user)
-#         return True
-#     except Facultydetail.DoesNotExist:
-#         return False
-
 
 def logout(request):
     if 'user_login' in request.session:
@@ -241,11 +274,9 @@ def forget_password(request):
 
 def add_timetable(request):
     dept1 = departments.objects.all()
-    for i in dept1:
-        if department == i.dept_name:
-            d1 = departments.objects.get(pk=i.id)
-
-    return render(request, 'add-time-table.html', {'dept1': dept1})
+    subs = subjects.objects.all()
+    facs = Facultydetail.objects.all()
+    return render(request, 'add-time-table.html', {'dept1': dept1, 'subs': subs, 'facs': facs})
 
 
 def delete_data(request, faculty_id):
@@ -270,3 +301,52 @@ def delete_subjects(request, subject_code):
         pi2.delete()
     return redirect('/subject/')  # Remove unnecessary arguments
 
+
+def download_faculty_details(request):
+    faculty_details = Facultydetail.objects.all()
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="faculty_details.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(
+        ['Faculty ID', 'Faculty Name', 'Date of Birth', 'Department', 'Designation', 'Expertise', 'Qualification',
+         'Join Date', 'Username', 'Phone', 'Address', 'City', 'State', 'Country', 'Zipcode', 'Email', 'Password'])
+
+    for faculty in faculty_details:
+        writer.writerow([faculty.faculty_id, faculty.faculty_name, faculty.date_of_birth, faculty.department.dept_name,
+                         faculty.designation, faculty.expertise, faculty.qualification, faculty.join_date,
+                         faculty.username, faculty.phone, faculty.address, faculty.city, faculty.state, faculty.country,
+                         faculty.zipcode, faculty.email, faculty.password])
+
+    return response
+
+
+def download_subjects_details(request):
+    subjects_details = subjects.objects.all()
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="subjects_details.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Subject Code', 'Subject Name', 'Semester'])
+
+    for subject in subjects_details:
+        writer.writerow([subject.subject_code, subject.subject_name, subject.semester])
+
+    return response
+
+
+def download_department_details(request):
+    department_details = departments.objects.all()
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="department_details.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Department ID', 'Department Name', 'HOD'])
+
+    for department in department_details:
+        writer.writerow([department.dept_id, department.dept_name, department.hod])
+
+    return response

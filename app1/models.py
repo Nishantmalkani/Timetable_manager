@@ -23,7 +23,7 @@ class departments(models.Model):
 #     password = models.CharField(max_length=500)
 
 class Facultydetail(models.Model):
-    faculty_id = models.CharField(max_length=30)
+    faculty_id = models.CharField(max_length=30, unique=True)
     faculty_name = models.CharField(max_length=500)
     date_of_birth = models.DateField()
     # gender = models.CharField(max_length=500)
@@ -36,10 +36,10 @@ class Facultydetail(models.Model):
     city = models.CharField(max_length=500)
     state = models.CharField(max_length=500)
     country = models.CharField(max_length=500)
-    zipcode = models.IntegerField()
+    zipcode = models.IntegerField(unique=True)
     username = models.CharField(max_length=255)
     phone = models.CharField(max_length=500)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     password = models.CharField(max_length=500)
 
 class subjects(models.Model):
