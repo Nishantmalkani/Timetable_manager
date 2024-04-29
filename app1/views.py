@@ -4,7 +4,6 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
-from django.http import HttpResponse
 from django.shortcuts import *
 
 from .models import *
@@ -276,6 +275,19 @@ def add_timetable(request):
     dept1 = departments.objects.all()
     subs = subjects.objects.all()
     facs = Facultydetail.objects.all()
+    if request.method == 'POST':
+        # Get the submitted data from the request
+        branch = request.POST.get('branch')
+        subject = request.POST.get('subject')
+        faculty = request.POST.get('faculty')
+        class_section = request.POST.get('class')
+        semester = request.POST.get('semester')
+        day = request.POST.get('day')
+        start_time = request.POST.get('start_time')
+        end_time = request.POST.get('end_time')
+        # room = request.POST.get('room')
+        timetable.objects.create(branch=branch, subject=subject, faculty=faculty, class_section=class_section,
+                                 semester=semester, day=day, start_time=start_time, end_time=end_time)
     return render(request, 'add-time-table.html', {'dept1': dept1, 'subs': subs, 'facs': facs})
 
 
