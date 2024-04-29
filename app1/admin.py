@@ -24,6 +24,8 @@ class subjectAdmin(admin.ModelAdmin):
     list_display = ('subject_code', 'subject_name', 'semester')
 
 
-@admin.register(timetable)
-class TimeTableAdmin(admin.ModelAdmin):
-    list_display = ('semester', 'division')
+admin.site.register(timetable)
+
+# @admin.register(timetable)
+# class timetableInline(admin.ModelAdmin):
+#     list_display = ('semester', 'subject', 'faculty', 'vanue', 'class_details', 'start_time', 'end_time', 'day')

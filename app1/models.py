@@ -55,3 +55,12 @@ class vanue(models.Model):
 class timetable(models.Model):
     semester = models.IntegerField()
     division = models.CharField(max_length=500)
+    subject = models.ManyToManyField(subjects)
+    faculty = models.ManyToManyField(Facultydetail)
+    vanue = models.ManyToManyField(vanue)
+    day = models.CharField(max_length=500)
+    time = models.TimeField()
+    duration = models.IntegerField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    status = models.CharField(max_length=500)
