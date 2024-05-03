@@ -18,6 +18,8 @@ from django.urls import path
 
 from app1 import views
 from app1.views import *
+# from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
 
@@ -31,13 +33,14 @@ urlpatterns = [
     path("edit-teacher/<int:faculty_id>", views.editteacher, name='edit-teacher'),
     path("department/", views.department, name='department'),
     path("subject/", views.subject, name='subject'),
-    path("teacher-details/", views.teacherdetails, name='teacher-details'),
+    path("teacher-details/<int:faculty_id>/", views.teacherdetails, name='teacher-details'),
     path("teacher/", views.teacher, name='teacher'),
     path("timetable/", views.timetable,name='timetable'),
     path("", views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path("profile/", views.profile, name='profile'),
     path("edit-time-tabel/", views.edit_timetable, name="edit-time-tabel"),
+    path("select_timetable/", views.select_timetable, name="select_timetable"),
     path("forget-password/", views.forget_password, name="forget-password"),
     # path("register/", views.register, name="register"),
     path("add-time-table/", views.add_timetable, name="add-time-table"),
@@ -47,5 +50,6 @@ urlpatterns = [
     path('download-faculty-details/', views.download_faculty_details, name='download-faculty-details'),
     path('download_subjects_details/', views.download_subjects_details, name='download_subjects_details'),
     path('download_department_details/', views.download_department_details, name='download_department_details'),
+    
 
 ]

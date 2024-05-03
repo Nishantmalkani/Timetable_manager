@@ -41,26 +41,37 @@ class Facultydetail(models.Model):
     phone = models.CharField(max_length=500)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=500)
+    def __str__(self):
+        return self.faculty_name
+    
 
 class subjects(models.Model):
     subject_code = models.CharField(max_length=500, unique=True)
     subject_name = models.CharField(max_length=500)
     semester = models.IntegerField()
+    def __str__(self):
+        return self.subject_name
 
 
 class vanue(models.Model):
     vanue_name = models.CharField(max_length=500)
 
-
-class timetable(models.Model):
+class time_table_field(models.Model):
+    branch = models.ForeignKey(departments,on_delete=models.CASCADE)
     semester = models.IntegerField()
     division = models.CharField(max_length=500)
+    def __str__(self):
+        return self.division
+    
+    
+
+class time_table_subject(models.Model):
+    time_table = models.ForeignKey(time_table_field,on_delete=models.CASCADE)
     subject = models.ManyToManyField(subjects)
     faculty = models.ManyToManyField(Facultydetail)
-    vanue = models.ManyToManyField(vanue)
-    day = models.CharField(max_length=500)
-    time = models.TimeField()
-    duration = models.IntegerField()
-    start_date = models.DateField()
-    end_date = models.DateField()
-    status = models.CharField(max_length=500)
+    week_day = models.CharField(max_length=500)
+    start_time = models.TimeField()
+    ends_time = models.TimeField()
+
+
+

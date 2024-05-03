@@ -58,12 +58,7 @@
 				</div>
 
 				<!-- Search Bar -->
-				<div class="top-nav-search">
-					<form>
-						<input type="text" class="form-control" placeholder="Search here">
-						<button class="btn" type="submit"><i class="fas fa-search"></i></button>
-					</form>
-				</div>
+				
 				<!-- /Search Bar -->
 
 				<!-- Mobile Menu Toggle -->
@@ -88,7 +83,7 @@
 							<div class="user-img">
 								<img class="rounded-circle" src="{% static 'assets/img/profiles/avatar-01.jpg' %}" width="31" alt="Ryan Taylor">
 								<div class="user-text">
-									<h6>Ryan Taylor</h6>
+									<h6>{{ user.username }}</h6>
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
@@ -99,7 +94,7 @@
 									<img src="{% static 'assets/img/profiles/avatar-01.jpg' %}" alt="User Image" class="avatar-img rounded-circle">
 								</div>
 								<div class="user-text">
-									<h6>Ryan Taylor</h6>
+									<h6>{{user.username}}</h6>
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
@@ -143,7 +138,7 @@
                                         class="menu-arrow"></span></a>
 								<ul>
                                     <li><a href="{% url 'teacher' %}">Faculty List</a></li>
-                                    <li><a href="{% url 'teacher-details' %}">Faculty View</a></li>
+                                    {% comment %} <li><a href="{% url 'teacher-details' faculty.name %}">Faculty View</a></li> {% endcomment %}
                                     <li><a href="{% url 'add-teacher' %}">Faculty Add</a></li>
                                     {% comment %}
                                         <li><a href="{% url 'edit-teacher' %}">Faculty Edit</a></li> {% endcomment %}

@@ -86,8 +86,7 @@
                                                 <h3 class="page-title">Faculty</h3>
 											</div>
 											<div class="col-auto text-end float-end ms-auto download-grp">
-                                                <a href="{% url 'teacher' %}"
-                                                   class="btn btn-outline-gray me-2 active"><i class="feather-list"></i></a>
+                                                <a href="{% url 'teacher' %}">
 
                                                 <a href="{% url 'download-faculty-details' %}"" class="btn
                                                 btn-outline-primary me-2"><i class="fas fa-download"></i> Download</a>
@@ -150,8 +149,7 @@
                                                     </td>
 													<td>
 														<h2 class="table-avatar">
-
-                                                            <a href="{% url 'teacher-details' %}">{{ i.faculty_name }}</a>
+                                                            <a href="{% url 'teacher-details' i.faculty_id %}">{{ i.faculty_name }}</a>
 														</h2>
 													</td>
                                                     <td>{{ i.date_of_birth }}</td>
@@ -177,6 +175,9 @@
                                                                href="{% url 'edit-teacher' i.faculty_id %}">
 																<i class="feather-edit"></i>
 															</a>
+                                                            <a href="{% url 'teacher-details' i.faculty_id %}" class="btn btn-sm bg-success-light me-2 ">
+                                                                <i class="feather-eye"></i>
+                                                            </a>
 														</div>
 													</td>
 												</tr>

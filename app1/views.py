@@ -11,11 +11,16 @@ from .models import *
 
 @login_required(login_url='login')
 def demo1(request):
+    faculty_count = Facultydetail.objects.count()
+    department_count = departments.objects.count()
+    context = {
+        'faculty_count': faculty_count,
+        'department_count': department_count,
+    }
     if 'user_login' in request.session:
-        return render(request, 'index.html')
+        return render(request, 'index.html', context)
     else:
         return redirect('login')
-
 
 def adddepartment(request):
     if 'user_login' in request.session:
@@ -43,7 +48,7 @@ def addsubject(request):
         semester = request.POST['semester']
 
         if subjects.objects.filter(subject_code=subject_code).exists():
-            raise ValueError(f"A subject with subject_code {subject_code} already exists.")
+            raise ValueError(f"A subject with subject_code {subject_code} already exists.".format(subject_code))
         else:
             subjects(subject_name=subject_name, subject_code=subject_code, semester=semester).save()
             return redirect('/subject/')
@@ -210,8 +215,9 @@ def subject(request):
     return render(request, 'subjects.html', {'sub': sub, 'sub1': sub1})
 
 
-def teacherdetails(request):
-    return render(request, 'teacher-details.html')
+def teacherdetails(request, faculty_id):
+    faculty = get_object_or_404(Facultydetail, faculty_id=faculty_id)
+    return render(request, 'teacher-details.html', {'faculty': faculty})
 
 
 def teacher(request):
@@ -230,7 +236,25 @@ def teacher(request):
 
 
 def timetable(request):
-    return render(request, 'time-table.html')
+    time_tables = time_table_subject.objects.all()  
+    time_table_field1 = time_table_field.objects.all()  
+    search_name = request.GET.get('search_name', '')
+    search_faculty = request.GET.get('search_faculty', '')
+    search_semester = request.GET.get('search_semester', '')
+    search_department = request.GET.get('search_department', '')
+
+    time_tables = time_tables.filter(
+        Q(subject__subject_name__icontains=search_name) |
+        Q(faculty__faculty_name__icontains=search_faculty)
+    )
+
+    if search_semester.isdigit():
+        time_tables = time_tables.filter(time_table__semester=search_semester)
+
+    if search_department:
+        time_tables = time_tables.filter(time_table__branch__name__icontains=search_department)
+
+    return render(request, 'time-table.html', {'time_tables': time_tables, 'time_table_field1': time_table_field1})
 
 
 # @login_required(login_url='dashboard')
@@ -270,25 +294,40 @@ def forget_password(request):
 # def register(request):
 #     return render(request, 'register.html')
 
-
-def add_timetable(request):
+def select_timetable(request):
     dept1 = departments.objects.all()
     subs = subjects.objects.all()
     facs = Facultydetail.objects.all()
     if request.method == 'POST':
-        # Get the submitted data from the request
-        branch = request.POST.get('branch')
-        subject = request.POST.get('subject')
-        faculty = request.POST.get('faculty')
-        class_section = request.POST.get('class')
-        semester = request.POST.get('semester')
-        day = request.POST.get('day')
-        start_time = request.POST.get('start_time')
-        end_time = request.POST.get('end_time')
-        # room = request.POST.get('room')
-        timetable.objects.create(branch=branch, subject=subject, faculty=faculty, class_section=class_section,
-                                 semester=semester, day=day, start_time=start_time, end_time=end_time)
-    return render(request, 'add-time-table.html', {'dept1': dept1, 'subs': subs, 'facs': facs})
+        week_day = request.POST['week_day']
+        start_time = request.POST['start_time']
+        end_time = request.POST['end_time']
+        subject = request.POST['subjects']
+        Faculty = request.POST['Faculty']
+        print(week_day,start_time,end_time,subject,Faculty,"66666666666666")
+        fieldobj = time_table_field.objects.last()
+        subject_obj = subjects.objects.get(subject_name = subject)
+        faculty_obj = Facultydetail.objects.get(faculty_name=Faculty)
+        time_table_subject_obj = time_table_subject.objects.create(time_table=fieldobj, week_day=week_day,start_time=start_time,ends_time=end_time)
+        time_table_subject_obj.subject.add(subject_obj)
+        time_table_subject_obj.faculty.add(faculty_obj)
+        return redirect('select_timetable')
+        
+    return render(request, 'add-time-table-subjects.html', {'dept1': dept1, 'subs': subs, 'facs': facs})
+
+
+def add_timetable(request):
+    dept1 = departments.objects.all()
+    if request.method == 'POST':
+    #     # Get the submitted data from the request
+        branch = request.POST['branch']
+        semester = request.POST['semester']
+        class_section = request.POST['class']
+        # print(branch,class_section,semester,"444444444444444")
+        b1 = departments.objects.get(dept_name=branch)
+        time_table_field.objects.create(branch=b1, division=class_section,semester=semester)
+        return redirect('select_timetable')
+    return render(request, 'add-time-table.html',{'dept1': dept1})
 
 
 def delete_data(request, faculty_id):

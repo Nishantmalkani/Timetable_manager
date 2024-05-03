@@ -26,7 +26,8 @@ class subjectAdmin(admin.ModelAdmin):
     list_display = ('subject_code', 'subject_name', 'semester')
 
 
-admin.site.register(timetable)
+admin.site.register(time_table_field)
+admin.site.register(time_table_subject)
 
 # @admin.register(timetable)
 # class timetableInline(admin.ModelAdmin):
