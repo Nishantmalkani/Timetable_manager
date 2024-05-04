@@ -12,14 +12,12 @@ admin.site.register(vanue)
 class departmentAdmin(admin.ModelAdmin):
     list_display = ('dept_id', 'dept_name', 'hod')
 
-
 @admin.register(Facultydetail)
 class FacultydetailAdmin(admin.ModelAdmin):
     list_display = (
         'faculty_id', 'faculty_name', 'date_of_birth', 'department', 'designation', 'expertise',
         'qualification', 'join_date', 'address', 'city', 'state', 'country', 'zipcode', 'username', 'phone', 'email',
         'password')
-
 
 @admin.register(subjects)
 class subjectAdmin(admin.ModelAdmin):
