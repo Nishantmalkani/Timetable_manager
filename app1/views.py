@@ -444,6 +444,7 @@ def edit_timetable(request, id1):
 
         # Save the changes
         timetable1.save()
+        print("successsssssssss")
 
         # Redirect to some page after the data is updated
         return redirect('/timetable/')
