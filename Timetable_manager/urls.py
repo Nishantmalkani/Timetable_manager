@@ -18,6 +18,7 @@ from django.urls import path
 
 from app1 import views
 from app1.views import *
+
 # from django.contrib.auth import views as auth_views
 
 
@@ -39,7 +40,7 @@ urlpatterns = [
     path("", views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path("profile/", views.profile, name='profile'),
-    path("edit-time-tabel/", views.edit_timetable, name="edit-time-tabel"),
+    path("edit-timetable/<int:id1>/", views.edit_timetable, name="edit-timetable"),
     path("select_timetable/", views.select_timetable, name="select_timetable"),
     path("forget-password/", views.forget_password, name="forget-password"),
     # path("register/", views.register, name="register"),
@@ -50,6 +51,6 @@ urlpatterns = [
     path('download-faculty-details/', views.download_faculty_details, name='download-faculty-details'),
     path('download_subjects_details/', views.download_subjects_details, name='download_subjects_details'),
     path('download_department_details/', views.download_department_details, name='download_department_details'),
-    
+    path('timetable/<int:time_table_id>/', views.delete_time_table, name='delete_time_table'),
 
 ]

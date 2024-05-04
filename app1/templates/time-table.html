@@ -87,6 +87,7 @@
 													<th>Subject</th>
 													<th>Class</th>
 													<th>Department</th>
+                                                    {% comment %} <th>Day</th> {% endcomment %}
 													<th>Start Time</th>
 													<th>End Time</th>
 													<th class="text-end">Action</th>
@@ -112,14 +113,21 @@
 													</td>
 													<td>{{ time_table_subject.time_table.branch.name }} {{ time_table_subject.time_table.semester }} {{ time_table_subject.time_table.division }}</td>
 													<td>{{ time_table_subject.time_table.branch.dept_name }}</td>
+                                                    {% comment %} <td>{{ time_table_subject.time_table.week_day }}</td>													 {% endcomment %}
 													<td>{{ time_table_subject.start_time }}</td>
 													<td>{{ time_table_subject.ends_time }}</td>
 													<td class="text-end">
 														<div class="actions">
-															<a href="javascript:;" class="btn btn-sm bg-success-light me-2">
-																<i class="feather-eye"></i>
-															</a>
-															<a href="{% url 'edit-time-tabel' %}" class="btn btn-sm bg-danger-light">
+                                                            <form action="{% url 'delete_time_table' time_table_subject.id %}"
+                                                                  method="POST">
+                                                                {% csrf_token %}
+                                                                <button type="submit"
+                                                                        class="btn btn-sm bg-danger-light">
+                                                                    <i class="feather-trash-2"></i>
+                                                                </button>
+                                                            </form>
+                                                            <a href="{% url 'edit-timetable' time_table_subject.id %}"
+                                                               class="btn btn-sm bg-danger-light">
 																<i class="feather-edit"></i>
 															</a>
 														</div>

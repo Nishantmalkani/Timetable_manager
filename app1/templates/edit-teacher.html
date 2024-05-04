@@ -110,13 +110,12 @@
                                                             {% for i in deps1 %}
                                                                 <option value="{{ i.dept_id }}"
                                                                         {% if i.dept_id == tch.department.dept_id %}selected{% endif %}>
-                                                                    {{ i.dept_id }} - {{ i.dept_name }}
+                                                                    {{ i.dept_name }}
                                                                 </option>
                                                             {% endfor %}
                                                         </select>
                                                     </div>
                                                 </div>
-
                                             </div>
 											<div class="col-12">
                                                 <h5 class="form-title"><span> Login Details</span></h5>

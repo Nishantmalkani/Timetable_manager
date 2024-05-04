@@ -4,6 +4,7 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
+from django.http import HttpResponse
 from django.shortcuts import *
 
 from .models import *
@@ -283,9 +284,6 @@ def profile(request):
     return render(request, 'profile.html')
 
 
-def edit_timetable(request):
-    return render(request, 'edit-time-table.html')
-
 
 def forget_password(request):
     return render(request, 'forgot-password.html')
@@ -401,3 +399,55 @@ def download_department_details(request):
         writer.writerow([department.dept_id, department.dept_name, department.hod])
 
     return response
+
+
+def delete_time_table(request, time_table_id):
+    time_table = get_object_or_404(time_table_subject, id=time_table_id)
+    time_table.delete()
+    return redirect('/timetable/')
+
+
+def edit_timetable(request, id1):
+    subject = subjects.objects.all()
+    faculty = Facultydetail.objects.all()
+    timetable = time_table_subject.objects.all()
+    timetable1 = get_object_or_404(time_table_subject, pk=id1)
+    print("wwwwwwwwwwwwwwwwww")
+
+    if request.method == 'POST':
+        # Get the faculty and subject from the form data
+        faculty_id = request.POST['faculty']
+        subject_code = request.POST['subject']
+
+        # Retrieve the faculty and subject instances from the database
+        faculty = get_object_or_404(Facultydetail, id=faculty_id)
+        subject = get_object_or_404(subject, id=subject_code)
+
+        # Assign the faculty and subject to the timetable
+        timetable1.faculty.set([faculty])
+        timetable1.subject.set([subject])
+
+        # Update other fields
+        # Update other fields
+        timetable1.semester = request.POST.get('semester')
+        timetable1.division = request.POST.get('division')
+        timetable1.week_day = request.POST.get('week_day')
+        timetable1.start_time = request.POST.get('start_time')
+        if 'start_time' in request.POST:
+            timetable1.start_time = request.POST.get('start_time')
+        else:
+            # Assign a default value to timetable1.start_time
+            timetable1.start_time = '08:00'
+
+            timetable1.end_time = request.POST.get('end_time')
+        timetable1.end_time = request.POST.get('end_time')
+
+        # Save the changes
+        timetable1.save()
+
+        # Redirect to some page after the data is updated
+        return redirect('/timetable/')
+
+    # If the request is a GET request, display the current data
+    return render(request, 'edit-time-table.html',
+                  {'timetable1': timetable1, 'subject': subject, 'timetable': timetable, 'faculty': faculty})
