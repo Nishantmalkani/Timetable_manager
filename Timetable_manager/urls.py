@@ -52,5 +52,6 @@ urlpatterns = [
     path('download_subjects_details/', views.download_subjects_details, name='download_subjects_details'),
     path('download_department_details/', views.download_department_details, name='download_department_details'),
     path('timetable/<int:time_table_id>/', views.delete_time_table, name='delete_time_table'),
+    path('download_timetable/', views.download_timetable, name='download_timetable'),
 
 ]

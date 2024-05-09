@@ -9,19 +9,70 @@ from django.shortcuts import *
 
 from .models import *
 
+from django.contrib.auth import update_session_auth_hash
+from django.contrib import messages
+from django.contrib.auth.hashers import check_password
+
+
+
 
 @login_required(login_url='login')
-def demo1(request):
-    faculty_count = Facultydetail.objects.count()
-    department_count = departments.objects.count()
-    context = {
-        'faculty_count': faculty_count,
-        'department_count': department_count,
-    }
+def demo1(request, id2=None):
     if 'user_login' in request.session:
+        # Define faculty_count, department_count, subject, faculty, and timetable here
+        faculty_count = Facultydetail.objects.count()
+        department_count = departments.objects.count()
+        subject = subjects.objects.all()
+        faculty = Facultydetail.objects.all()
+        timetable = time_table_subject.objects.all()
+
+        # timetable1 = None  # Define timetable1 as None by default
+
+        # if request.method == 'POST':
+        #     # if id1 is None:
+        #     #     return HttpResponse("Invalid request. No ID provided.")
+
+        #     # Get the faculty and subject from the form data
+        #     faculty_id = request.POST['faculty']
+        #     subject_code = request.POST['subject']
+
+        #     # Retrieve the faculty and subject instances from the database
+        #     faculty = get_object_or_404(Facultydetail, id=faculty_id)
+        #     subject = get_object_or_404(subjects, id=subject_code)
+
+        #     # Retrieve the timetable instance
+        #     timetable1 = get_object_or_404(time_table_subject, pk=id)
+
+        #     # Assign the faculty and subject to the timetable
+        #     timetable1.faculty.set([faculty])
+        #     timetable1.subject.set([subject])
+        #     timetable1.week_day = request.POST.get('week_day')
+
+        #     # Get the new start and end times from the form data
+        #     new_start_time = request.POST.get('new_start_time')
+        #     new_end_time = request.POST.get('new_end_time')
+
+        #     # Update the start and end times if they were provided
+        #     if new_start_time:
+        #         timetable1.start_time = new_start_time
+        #     if new_end_time:
+        #         timetable1.end_time = new_end_time
+
+        #     # Save the changes
+        #     timetable1.save()
+
+        context = {
+            'faculty_count': faculty_count,
+            'department_count': department_count,
+            'subject': subject,
+            'faculty': faculty,
+            'timetable': timetable,
+            # 'timetable1': timetable1,  # Add timetable1 to the context here
+        }
+
         return render(request, 'index.html', context)
     else:
-        return redirect('login')
+        return redirect('login')    
 
 def adddepartment(request):
     if 'user_login' in request.session:
@@ -281,8 +332,23 @@ def logout(request):
     return redirect('login')
 
 def profile(request):
-    return render(request, 'profile.html')
+    if request.method == 'POST':
+        old_password = request.POST['old_password']
+        new_password1 = request.POST['new_password1']
+        new_password2 = request.POST['new_password2']
 
+        if not check_password(old_password, request.user.password):
+            messages.error(request, 'Old password is incorrect')
+        elif new_password1 != new_password2:
+            messages.error(request, 'New passwords do not match')
+        else:
+            request.user.set_password(new_password1)
+            request.user.save()
+            update_session_auth_hash(request, request.user)
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('profile')
+    # ... rest of your profile view ...
+    return render(request, 'profile.html')
 
 
 def forget_password(request):
@@ -452,3 +518,22 @@ def edit_timetable(request, id1):
     # If the request is a GET request, display the current data
     return render(request, 'edit-time-table.html',
                   {'timetable1': timetable1, 'subject': subject, 'timetable': timetable, 'faculty': faculty})
+
+
+def download_timetable(request):
+    # Create the HttpResponse object with the appropriate CSV header.
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="timetable.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['ID', 'Faculty Name', 'Subject Name', 'Week Day', 'Start Time', 'End Time'])
+
+    timetables = time_table_subject.objects.all()
+
+    for timetable in timetables:
+        writer.writerow(
+            [timetable.id, timetable.faculty.name, timetable.subject.name, timetable.week_day, timetable.start_time,
+             timetable.end_time])
+
+    return response

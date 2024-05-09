@@ -65,86 +65,70 @@
 
                                             </div>
                                         </div>
-                                        <div class="pt-3 pb-3">
-                                            <div class="table-responsive lesson">
-                                                <table class="table table-center">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="date">
-                                                                <b>Ryan</b>
-
-                                                                <ul class="teacher-date-list">
-                                                                    <li><i class="fas fa-calendar-alt me-2"></i>Monnday
-                                                                        
-                                                                    </li>
-                                                                    <li>|</li>
-                                                                    <li><i class="fas fa-clock me-2"></i>09:00 - 10:00
-                                                                        am
-                                                                    </li>
-                                                                </ul>
+                                        <div class="col-sm-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <form method="POST">
+                                                        {% csrf_token %}
+                                                        <div class="col-12 col-sm-6">
+                                                            <div class="form-group local-forms">
+                                                                <label>Faculty <span
+                                                                        class="login-danger">*</span></label>
+                                                                <div class="col-md-12">
+                                                                    <select class="form-control" name="faculty">
+                                                                        {% for i in faculty %}
+                                                                            <option value="{{ i.faculty_id }}"
+                                                                                    {% if i.faculty_id == existing_data.faculty_id %}selected{% endif %}>
+                                                                                {{ i.faculty_name }}
+                                                                            </option>
+                                                                        {% endfor %}
+                                                                    </select>
+                                                                </div>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="lesson-confirm">
-                                                                <a href="#">Confirmed</a>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-info">Reschedule
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="date">
-                                                                <b></b>
-
-                                                                <ul class="teacher-date-list">
-                                                                    <li><i class="fas fa-calendar-alt me-2"></i>
-                                                                        <select name="week_day"
-                                                                                class="form-control form-select">
-                                                                            <option value="Monday">Monday</option>
-                                                                            <option value="Tuesday">Tuesday</option>
-                                                                            <option value="Wednesday">Wednesday</option>
-                                                                            <option value="Thursday">Thursday</option>
-                                                                            <option value="Friday">Friday</option>
-                                                                            <option value="Saturday">Saturday</option>
-                                                                            <option value="Sunday">Sunday</option>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 local-forms">
+                                                            <div class="form-group row">
+                                                                <label class="col-form-label col-md-4">Subject</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="subject"
+                                                                            class="form-control form-select">
+                                                                        {% for i in subject %}
+                                                                            <option value="{{ i.subject_code }}"
+                                                                                    {% if i.subject_code == existing_data.subject_code %}selected{% endif %}>
+                                                                                {{ i.subject_name }}
+                                                                            </option>
+                                                                        {% endfor %}
                                                                         </select>
-
-                                                                    </li>
-                                                                    <li>|</li>
-                                                                    <li><i class="fas fa-clock me-2"></i>
-                                                                        <div class="col-12 col-sm-6">
-                                                                            <div class="form-group local-forms">
-                                                                                <label>Start Time <span
-                                                                                        class="login-danger">*</span></label>
-                                                                                <input type="time" class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-12 col-sm-6">
-                                                                            <div class="form-group local-forms">
-                                                                                <label>End Time <span
-                                                                                        class="login-danger">*</span></label>
-                                                                                <input type="time" class="form-control">
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
+                                                                </div>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="lesson-confirm">
-                                                                <a href="#">Confirmed</a>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <div class="form-group local-forms">
+                                                                <label>Start Time <span
+                                                                        class="login-danger">*</span></label>
+                                                                <input type="time" class="form-control">
                                                             </div>
-                                                            <button type="submit" class="btn btn-info">Reschedule
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <div class="form-group local-forms">
+                                                                <label>End Time <span
+                                                                        class="login-danger">*</span></label>
+                                                                <input type="time" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="student-submit">
+                                                                <button type="submit" class="btn btn-primary"
+                                                                        value="Submit">Reschedule
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
+                                            </div>
                                     </div>
+                                </div>
                                 </div>
 
                             </div>
