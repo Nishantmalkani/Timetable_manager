@@ -533,7 +533,8 @@ def download_timetable(request):
 
     for timetable in timetables:
         writer.writerow(
-            [timetable.id, timetable.faculty.name, timetable.subject.name, timetable.week_day, timetable.start_time,
-             timetable.end_time])
+            [timetable.id, timetable.faculty.faculty_name, timetable.subject.subject_name, timetable.week_day,
+             timetable.start_time,
+             timetable.ends_time])
 
     return response
